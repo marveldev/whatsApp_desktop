@@ -1,0 +1,86 @@
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.default-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+}
+
+.top-nav {
+  position: fixed;
+  width: 30%;
+  z-index: 1;
+  background-color: #EDEDED;
+}
+
+.top-nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr;
+  margin: 0.5em 1em;
+}
+
+i {
+  color: #919191;
+}
+
+.profile-photo {
+  font-size: 0.7em;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+}
+
+.image {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+  margin: 0.4em 1em 0 0;
+}
+
+.search-box {
+  width: 75%;
+  border: unset;
+  padding: 1em 2.5em 0 2.5em;
+  border-radius: 1.5em;
+  outline: none;
+  resize: none;
+  margin: 1em;
+}
+
+.chat-persons-list {
+  position: relative;
+  top: 21%;
+  height: auto;
+  max-height: 31em;
+  overflow-y: auto;
+}
+
+.chat-persons {
+  display: flex;
+  width: 100%;
+}
+
+.status-info {
+  text-align: left;
+  border-bottom: 0.5px solid #95959555;
+  width: 100%;
+  line-height: 1.5em;
+  padding: 1em 0;
+}
+
+.status-info p {
+  margin: 0;
+}
+
+.status-info strong {
+  font-size: 1.2em;
+}
