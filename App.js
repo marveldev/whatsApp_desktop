@@ -1,13 +1,13 @@
-import chatPage from "./modules/chatPage/chatPage.js"
-import defaultNav from "./modules/defaultNav/defaultNav.js"
+import ChatPage from "./modules/chatPage/chatPage.js"
+import DefaultNav from "./modules/defaultNav/defaultNav.js"
 
 const App = () => {
   return `
     <section class="page-container">
       <div>
-        ${defaultNav()}
+        ${DefaultNav()}
       </div>
-      ${chatPage()}
+      ${ChatPage()}
     </section>
   `
 }
