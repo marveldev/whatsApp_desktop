@@ -1,4 +1,4 @@
-const defaultNav = () => {
+const DefaultNav = () => {
   return `
     <div class="default-nav">
       <div class="top-nav">
@@ -118,4 +118,4 @@ const defaultNav = () => {
   `
 }
 
-export default defaultNav
+export default DefaultNav
