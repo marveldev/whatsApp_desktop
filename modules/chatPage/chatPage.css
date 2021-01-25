@@ -1,0 +1,74 @@
+.chat-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #efe7dd;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url('https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg');
+}
+
+.chat-page-dropdown {
+  margin-right: 1em;
+}
+
+.chat-top-nav {
+  display: flex;
+  background-color: #EDEDED;
+  border-left: 0.1em solid #DADADA;
+}
+
+.chat-top-nav > img {
+  font-size: 0.7em;
+  margin: 1.5em;
+}
+
+#chatInputContent {
+  position: fixed;
+  bottom: 0;
+  background-color: #F0F0F0;
+  width: 100%;
+  height: 4.5em;
+}
+
+.person-button-container {
+  display: none;
+}
+
+#chatInputContent > div {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.6fr;
+}
+
+.chat-box {
+  width: 80%;
+  border: unset;
+  padding: 1em 2.5em 0 2.5em;
+  border-radius: 1.5em;
+  outline: none;
+  resize: none;
+  margin: 1em;
+}
+
+.add-buttons i {
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+.add-buttons {
+  margin: auto;
+}
+
+.send-button {
+  display: none;
+  font-size: 1.8em;
+  margin-top: 0.7em;
+}
+
+.record-button {
+  font-size: 1.8em;
+  margin-top: 0.7em;
+}
