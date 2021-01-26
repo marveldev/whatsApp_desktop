@@ -89,3 +89,15 @@ button {
 .status-info strong {
   font-size: 1.2em;
 }
+
+.chat-persons-list::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+.chat-persons-list::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.chat-persons-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
