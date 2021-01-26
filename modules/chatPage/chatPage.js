@@ -1,3 +1,12 @@
+const chatDropDownModal = `
+  <div id="chatDropdown" class="dropdown-modal">
+    <button>Reply</button>
+    <button>Forward message</button>
+    <button>Star message</button>
+    <button>Delete message</button>
+  </div>
+`
+
 const ChatPage = () => {
   return `
     <div class="chat-page">
@@ -12,6 +21,7 @@ const ChatPage = () => {
           <i class="material-icons">&#xe5d4;</i>
         </button>
       </div>
+      ${chatDropDownModal}
       <div class="chat-container"></div>
       <div id="chatInputContent">
         <div>
