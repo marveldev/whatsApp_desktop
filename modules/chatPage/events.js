@@ -1,3 +1,13 @@
+const chatItemEvents = () => {
+  const chatItems = document.querySelectorAll('.chat')
+  for (let index = 0; index < chatItems.length; index++) {
+    const chatItem = chatItems[index]
+    chatItem.addEventListener('click', () => {
+      console.log('ok');
+    })
+  }
+}
+
 const addChatItemToDom = person => {
   const chatContainer = document.querySelector('.chat-container')
   const personContainerButton = document.querySelector('.person-button-container')
@@ -9,7 +19,7 @@ const addChatItemToDom = person => {
   const chatTime = new Date().toTimeString().substr(0, 5)
 
   const chatItem = `
-    <div id="${itemId}">
+    <div id="${itemId}" class="chat">
       <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
       <div class="chat-item-overlay"></div>
       <div class="${person} chat-item">
@@ -37,7 +47,7 @@ const addChatItemToDom = person => {
   // }
 
   // addEntryToDb('chatData', chatObject)
-  // chatItemEvents()
+  chatItemEvents()
 }
 
 const chatPageEvents = () => {
