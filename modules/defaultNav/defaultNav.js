@@ -8,7 +8,7 @@ const DefaultNav = () => {
           <button class=""><i class="material-icons">&#xe0b7;</i></button>
           <button class="top-nav-dropdown"><i class="material-icons">&#xe5d4;</i></button>
         </div>
-        <div>
+        <div id="searchBoxContainer">
           <textarea class="search-box" placeholder="Search or start a new chat"></textarea>
         </div>
       </div>
