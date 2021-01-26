@@ -12,6 +12,7 @@ const ChatPage = () => {
           <i class="material-icons">&#xe5d4;</i>
         </button>
       </div>
+      <div class="chat-container"></div>
       <div id="chatInputContent">
         <div>
           <div class="add-buttons">
@@ -19,7 +20,7 @@ const ChatPage = () => {
             <button class="clip-icon"><i class="fa fa-paperclip"></i></button>
           </div>
           <textarea class="chat-box" placeholder="Type a message"></textarea>
-          <div>
+          <div class="add-buttons">
             <button type="button" class="record-button"><i class="fa fa-microphone"></i></button>
             <button type="button" class="send-button"><i class="material-icons">&#xe163;</i></button>
           </div>
