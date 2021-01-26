@@ -1,17 +1,20 @@
-import ChatPage from "./modules/chatPage/chatPage.js"
-import chatPageEvents from "./modules/chatPage/events.js"
+import { request } from "./dataStorage.js"
 import DefaultNav from "./modules/defaultNav/defaultNav.js"
+import DefaultPage from "./modules/defaultPage/defaultPage.js"
 
 const App = () => {
   return `
     <section class="page-container">
-      <div>
+      <div class="current-nav">
         ${DefaultNav()}
       </div>
-      ${ChatPage()}
+      <div class="current-page">
+        ${DefaultPage()}
+      </div>
     </section>
   `
 }
 
-document.querySelector('.root').innerHTML = App()
-chatPageEvents()
+request.onsuccess = () => {
+  document.querySelector('.root').innerHTML = App()
+}
