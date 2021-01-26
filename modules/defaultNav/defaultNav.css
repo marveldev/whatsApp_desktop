@@ -51,10 +51,14 @@ button {
   margin: 0.4em 1em 0 0;
 }
 
+#searchBoxContainer {
+  width: 100%;
+}
+
 .search-box {
-  width: 75%;
+  width: 80%;
   border: unset;
-  padding: 1em 2.5em 0 2.5em;
+  padding: 1em 0 0 2.5em;
   border-radius: 1.5em;
   outline: none;
   resize: none;
