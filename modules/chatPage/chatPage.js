@@ -4,7 +4,7 @@ const ChatPage = () => {
       <div class="chat-top-nav">
         <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
           class="image" alt="photo">
-        <div class="status-info">
+        <div class="person-info">
           <strong>Jack Williams</strong>
           <p>online</p>
         </div>
