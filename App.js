@@ -1,5 +1,6 @@
 import { request } from "./dataStorage.js"
 import DefaultNav from "./modules/defaultNav/defaultNav.js"
+import defaultNavEvents from "./modules/defaultNav/events.js"
 import DefaultPage from "./modules/defaultPage/defaultPage.js"
 
 const App = () => {
@@ -17,4 +18,5 @@ const App = () => {
 
 request.onsuccess = () => {
   document.querySelector('.root').innerHTML = App()
+  defaultNavEvents()
 }
