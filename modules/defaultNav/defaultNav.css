@@ -65,7 +65,7 @@ button {
   margin: 1em;
 }
 
-.chat-persons-list {
+.chat-person-list {
   position: relative;
   top: 21%;
   height: auto;
@@ -73,17 +73,21 @@ button {
   overflow-y: auto;
 }
 
-.chat-persons {
+.chat-person {
   display: flex;
   width: 100%;
 }
 
+.chat-person:hover {
+  background-color: #EBEBEB;
+}
+
 .status-info {
   text-align: left;
-  border-bottom: 0.5px solid #95959555;
   width: 100%;
   line-height: 1.5em;
   padding: 1em 0;
+  border-bottom: 0.01em solid #95959555;
 }
 
 .status-info p {
@@ -94,14 +98,14 @@ button {
   font-size: 1.2em;
 }
 
-.chat-persons-list::-webkit-scrollbar {
+.chat-person-list::-webkit-scrollbar {
   width: 0.4em;
 }
 
-.chat-persons-list::-webkit-scrollbar-track {
+.chat-person-list::-webkit-scrollbar-track {
   background-color: #fff;
 }
 
-.chat-persons-list::-webkit-scrollbar-thumb {
+.chat-person-list::-webkit-scrollbar-thumb {
   background: #ccc;
 }
