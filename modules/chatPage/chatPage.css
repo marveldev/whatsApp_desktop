@@ -149,6 +149,29 @@
   border-right: 0.8em solid #fff;
 }
 
+.chat-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #BAB3AE;
+}
+
+.person-info {
+  text-align: left;
+  width: 100%;
+  line-height: 1.1em;
+  padding: 1.3em 0;
+}
+
+.person-info p {
+  margin: 0;
+}
+
 /* #chatPageDropdown {
   display: none;
 } */
