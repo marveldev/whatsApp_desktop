@@ -1,6 +1,9 @@
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  font-family: "Roboto", sans-serif, Helvetica;
+  width: 100%;
+  height: 100%;
 }
 
 .default-nav {
@@ -35,6 +38,8 @@ i {
 button {
   border: unset;
   background-color: unset;
+  cursor: pointer;
+  outline: none;
 }
 
 .image {
