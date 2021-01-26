@@ -7,13 +7,9 @@ import defaultNavEvents from "./defaultNav/events.js"
 const switchCurrentPage = (page) => {
   const currentPage = document.querySelector('.current-page')
   const currentNav = document.querySelector('.current-nav')
-  localStorage.setItem('currentNav', nav)
   localStorage.setItem('currentPage', page)
 
   switch (page) {
-    case 'defaultPage':
-      currentPage.innerHTML = DefaultPage()
-      break;
     case 'defaultNav':
       currentNav.innerHTML = DefaultNav()
       defaultNavEvents()
