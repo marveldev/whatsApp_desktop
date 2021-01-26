@@ -1,4 +1,5 @@
 import ChatPage from "./modules/chatPage/chatPage.js"
+import chatPageEvents from "./modules/chatPage/events.js"
 import DefaultNav from "./modules/defaultNav/defaultNav.js"
 
 const App = () => {
@@ -13,3 +14,4 @@ const App = () => {
 }
 
 document.querySelector('.root').innerHTML = App()
+chatPageEvents()
