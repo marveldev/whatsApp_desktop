@@ -12,8 +12,8 @@ const DefaultNav = () => {
           <textarea class="search-box" placeholder="Search or start a new chat"></textarea>
         </div>
       </div>
-      <div class="chat-persons-list">
-        <button class="chat-persons">
+      <div class="chat-person-list">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -23,7 +23,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -33,7 +33,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -43,7 +43,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -53,7 +53,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -63,7 +63,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -73,7 +73,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -83,7 +83,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -93,7 +93,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
@@ -103,7 +103,7 @@ const DefaultNav = () => {
             </div>
           </div>
         </button>
-        <button class="chat-persons">
+        <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
           <div class="status-info">
