@@ -171,6 +171,26 @@
   margin: 0;
 }
 
+.dropdown-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: auto;
+  width: 10em;
+  z-index: 2;
+  padding: 0.5em 1em;
+}
+
+.dropdown-modal > button {
+  display: block;
+  padding: 1em 0.5em;
+  width: 100%;
+  text-align: left;
+  margin: 0.2em 0;
+}
+
 /* #chatPageDropdown {
   display: none;
 } */
