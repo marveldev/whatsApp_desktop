@@ -1,9 +1,13 @@
 const chatItemEvents = () => {
-  const chatItems = document.querySelectorAll('.chat')
-  for (let index = 0; index < chatItems.length; index++) {
-    const chatItem = chatItems[index]
-    chatItem.addEventListener('click', () => {
-      console.log('ok');
+  const chatTexts = document.querySelectorAll('.chat-text')
+  for (let index = 0; index < chatTexts.length; index++) {
+    const chatText = chatTexts[index]
+    chatText.addEventListener('mouseover', () => {
+      chatText.lastElementChild.style.visibility = 'visible'
+    })
+
+    chatText.addEventListener('mouseout', () => {
+      chatText.lastElementChild.style.visibility = 'hidden'
     })
   }
 }
@@ -19,13 +23,13 @@ const addChatItemToDom = person => {
   const chatTime = new Date().toTimeString().substr(0, 5)
 
   const chatItem = `
-    <div id="${itemId}" class="chat">
+    <div id="${itemId}">
       <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
       <div class="${person} chat-item">
         <div id="${person}" class="chat-text">
           <span class="message-value">${chatBoxValue}</span>
           <sub class="chat-time">${chatTime}</sub>
-          <button class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
+          <button class="chat-item-dropdown ${itemId}"><i class="material-icons">&#xe313;</i><sup>
         </div>
       </div>
     </div>
