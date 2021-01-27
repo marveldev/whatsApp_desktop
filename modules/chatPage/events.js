@@ -1,7 +1,11 @@
 import { addEntryToDb } from "../../dataStorage.js"
 
 const chatItemEvents = () => {
+  const personOneDropdown = document.querySelector('#personOneDropdown')
+  const personTwoDropdown = document.querySelector('#personTwoDropdown')
   const chatTexts = document.querySelectorAll('.chat-text')
+  const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
+
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
     chatText.addEventListener('mouseover', () => {
@@ -10,6 +14,23 @@ const chatItemEvents = () => {
 
     chatText.addEventListener('mouseout', () => {
       chatText.lastElementChild.style.visibility = 'hidden'
+    })
+  }
+
+  for (let index = 0; index < chatItemDropdowns.length; index++) {
+    const chatItemDropdown = chatItemDropdowns[index];
+    chatItemDropdown.addEventListener('click', (event) => {
+      const person = chatItemDropdown.parentElement.id
+      const horizontalPosition = event.clientX
+      const verticalPosition = event.clientY
+      if (person === 'person-one') {
+        personOneDropdown.style.display = 'block'
+        personOneDropdown.style.top = verticalPosition + 'px'
+      } else {
+        personTwoDropdown.style.display = 'block'
+        personTwoDropdown.style.top = verticalPosition + 'px'
+        personTwoDropdown.style.left = horizontalPosition + 'px'
+      }
     })
   }
 }
@@ -53,7 +74,7 @@ const addChatItemToDom = person => {
   }
 
   addEntryToDb('chatData', chatObject)
-  chatItemEvents()
+  chatItemEvents(person)
 }
 
 const chatPageEvents = () => {
