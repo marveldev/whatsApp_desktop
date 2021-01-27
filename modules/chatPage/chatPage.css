@@ -133,6 +133,7 @@
 }
 
 .chat-item-dropdown {
+  visibility: hidden;
   position: relative;
   background-color: #E1FFC7;
   vertical-align: middle;
