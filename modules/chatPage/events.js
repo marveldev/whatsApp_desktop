@@ -6,6 +6,7 @@ const chatItemEvents = () => {
   const chatTexts = document.querySelectorAll('.chat-text')
   const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
+  const deleteModalButtons = document.querySelectorAll('.delete-modal-button')
 
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
@@ -34,6 +35,15 @@ const chatItemEvents = () => {
         personTwoDropdown.style.left = horizontalPosition + 'px'
         chatPageOverlay.style.display = 'block'
       }
+    })
+  }
+
+  for (let index = 0; index < deleteModalButtons.length; index++) {
+    const deleteModalButton = deleteModalButtons[index]
+    deleteModalButton.addEventListener('click', () => {
+      console.log('ok');
+      document.querySelector('.delete-modal').style.display = 'block'
+      document.querySelector('.page-overlay').style.display = 'block'
     })
   }
 
