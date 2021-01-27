@@ -6,7 +6,7 @@ const personOneDropDown = `
     <button>Reply</button>
     <button>Forward message</button>
     <button>Star message</button>
-    <button>Delete message</button>
+    <button class="delete-modal-button">Delete message</button>
   </div>
 `
 
@@ -15,7 +15,7 @@ const personTwoDropDown = `
     <button>Reply</button>
     <button>Forward message</button>
     <button>Star message</button>
-    <button>Delete message</button>
+    <button class="delete-modal-button">Delete message</button>
   </div>
 `
 
@@ -51,8 +51,11 @@ const ChatPage = async () => {
           <i class="material-icons">&#xe5d4;</i>
         </button>
       </div>
-      ${personOneDropDown}
-      ${personTwoDropDown}
+      <div class="delete-modal">
+        <p>Delete message?</p>
+        <button class="cancel-button">CANCEL</button>
+        <button class="delete-button">DELETE FOR ME</button>
+      </div>
       <div class="chat-container">${chatItems.join('')}</div>
       <div id="chatInputContent">
         <div>
@@ -71,6 +74,8 @@ const ChatPage = async () => {
           <button type="button" class="person-two-button">Person2</button>
         </span>
       </div>
+      ${personOneDropDown}
+      ${personTwoDropDown}
     </div>
   `
 }
