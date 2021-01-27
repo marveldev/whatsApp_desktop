@@ -5,6 +5,7 @@ const chatItemEvents = () => {
   const personTwoDropdown = document.querySelector('#personTwoDropdown')
   const chatTexts = document.querySelectorAll('.chat-text')
   const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
+  const chatPageOverlay = document.querySelector('#chatPageOverlay')
 
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
@@ -26,13 +27,21 @@ const chatItemEvents = () => {
       if (person === 'person-one') {
         personOneDropdown.style.display = 'block'
         personOneDropdown.style.top = verticalPosition + 'px'
+        chatPageOverlay.style.display = 'block'
       } else {
         personTwoDropdown.style.display = 'block'
         personTwoDropdown.style.top = verticalPosition + 'px'
         personTwoDropdown.style.left = horizontalPosition + 'px'
+        chatPageOverlay.style.display = 'block'
       }
     })
   }
+
+  chatPageOverlay.addEventListener('click', () => {
+    personOneDropdown.style.display = 'none'
+    personTwoDropdown.style.display = 'none'
+    chatPageOverlay.style.display = 'none'
+  })
 }
 
 const addChatItemToDom = person => {
