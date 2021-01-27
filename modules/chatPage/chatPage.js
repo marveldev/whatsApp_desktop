@@ -1,3 +1,5 @@
+import { getEntryFromDb } from "../../dataStorage.js"
+
 const chatDropDownModal = `
   <div id="chatDropdown" class="dropdown-modal">
     <button>Reply</button>
@@ -7,7 +9,24 @@ const chatDropDownModal = `
   </div>
 `
 
-const ChatPage = () => {
+const ChatPage = async () => {
+  const chatData = await getEntryFromDb('chatData')
+  const chatItems = chatData.map(chatItem => {
+    const { itemId, person, chatTime,  chatBoxValue } = chatItem
+    return `
+      <div id="${itemId}">
+        <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
+        <div class="${person} chat-item">
+          <div id="${person}" class="chat-text">
+            <span class="message-value">${chatBoxValue}</span>
+            <sub class="chat-time">${chatTime}</sub>
+            <button class="chat-item-dropdown ${itemId}"><i class="material-icons">&#xe313;</i><sup>
+          </div>
+        </div>
+      </div>
+    `
+  })
+
   return `
     <div class="chat-page">
       <div class="chat-top-nav">
@@ -22,7 +41,7 @@ const ChatPage = () => {
         </button>
       </div>
       ${chatDropDownModal}
-      <div class="chat-container"></div>
+      <div class="chat-container">${chatItems.join('')}</div>
       <div id="chatInputContent">
         <div>
           <div class="add-buttons">
