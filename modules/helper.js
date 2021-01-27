@@ -1,7 +1,7 @@
-import DefaultPage from "./defaultPage/defaultPage.js"
-import ChatPage from "./chatPage/chatPage.js"
+import DefaultPage from "./defaultPage/DefaultPage.js"
+import ChatPage from "./chatPage/ChatPage.js"
 import chatPageEvents, { chatItemEvents } from "./chatPage/events.js"
-import DefaultNav from "./defaultNav/defaultNav.js"
+import DefaultNav from "./defaultNav/DefaultNav.js"
 import defaultNavEvents from "./defaultNav/events.js"
 
 const switchCurrentPage = async (page) => {
