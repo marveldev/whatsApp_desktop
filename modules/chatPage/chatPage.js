@@ -17,7 +17,7 @@ const ChatPage = () => {
           <strong>Jack Williams</strong>
           <p>online</p>
         </div>
-        <button type="button" class="chat-page-dropdown">
+        <button type="button" class="chat-nav-dropdown">
           <i class="material-icons">&#xe5d4;</i>
         </button>
       </div>
