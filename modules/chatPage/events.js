@@ -41,9 +41,10 @@ const chatItemEvents = () => {
   for (let index = 0; index < deleteModalButtons.length; index++) {
     const deleteModalButton = deleteModalButtons[index]
     deleteModalButton.addEventListener('click', () => {
-      console.log('ok');
       document.querySelector('.delete-modal').style.display = 'block'
       document.querySelector('.page-overlay').style.display = 'block'
+      chatPageOverlay.style.display = 'none'
+      deleteModalButton.parentElement.style.display = 'none'
     })
   }
 
@@ -51,6 +52,27 @@ const chatItemEvents = () => {
     personOneDropdown.style.display = 'none'
     personTwoDropdown.style.display = 'none'
     chatPageOverlay.style.display = 'none'
+  })
+
+  document.querySelector('.cancel-button').addEventListener('click', () => {
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('.page-overlay').style.display = 'none'
+  })
+
+  const deleteButton = document.querySelector('.delete-button')
+  deleteButton.addEventListener('click', () => {
+    // const chatContainer = document.querySelector('.chat-container')
+    // for (let index = 0; index < itemId.length; index++) {
+    //   const singleItemId = itemId[index]
+    //   const chatItemDiv = document.querySelector(`#${singleItemId}`)
+    //   chatContainer.removeChild(chatItemDiv)
+    // }
+    // singleChatNav.style.display = 'none'
+    // document.querySelector('.delete-modal').style.display = 'none'
+    // document.querySelector('#singleChatNav').style.display = 'flex'
+    // overlay.style.display = 'none'
+    // deleteEntry('chatData', itemId)
+    // itemId = []
   })
 }
 
