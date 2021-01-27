@@ -1,7 +1,17 @@
 import { getEntryFromDb } from "../../dataStorage.js"
 
-const chatDropDownModal = `
-  <div id="chatDropdown" class="dropdown-modal">
+const personOneDropDown = `
+  <div id="personOneDropdown" class="dropdown-modal">
+    <button>Message info</button>
+    <button>Reply</button>
+    <button>Forward message</button>
+    <button>Star message</button>
+    <button>Delete message</button>
+  </div>
+`
+
+const personTwoDropDown = `
+  <div id="personTwoDropdown" class="dropdown-modal">
     <button>Reply</button>
     <button>Forward message</button>
     <button>Star message</button>
@@ -40,7 +50,8 @@ const ChatPage = async () => {
           <i class="material-icons">&#xe5d4;</i>
         </button>
       </div>
-      ${chatDropDownModal}
+      ${personOneDropDown}
+      ${personTwoDropDown}
       <div class="chat-container">${chatItems.join('')}</div>
       <div id="chatInputContent">
         <div>
