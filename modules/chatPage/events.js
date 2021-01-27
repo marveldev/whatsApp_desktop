@@ -1,3 +1,5 @@
+import { addEntryToDb } from "../../dataStorage.js"
+
 const chatItemEvents = () => {
   const chatTexts = document.querySelectorAll('.chat-text')
   for (let index = 0; index < chatTexts.length; index++) {
@@ -43,14 +45,14 @@ const addChatItemToDom = person => {
   sendChatButton.style.display = 'none'
   personContainerButton.style.display = 'none'
 
-  // const chatObject = {
-  //   itemId: itemId,
-  //   person: person,
-  //   chatTime: chatTime,
-  //   chatBoxValue: chatBoxValue
-  // }
+  const chatObject = {
+    itemId: itemId,
+    person: person,
+    chatTime: chatTime,
+    chatBoxValue: chatBoxValue
+  }
 
-  // addEntryToDb('chatData', chatObject)
+  addEntryToDb('chatData', chatObject)
   chatItemEvents()
 }
 
@@ -83,3 +85,4 @@ const chatPageEvents = () => {
 }
 
 export default chatPageEvents
+export { chatItemEvents }
