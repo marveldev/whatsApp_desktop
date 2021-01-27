@@ -53,8 +53,10 @@ const ChatPage = async () => {
       </div>
       <div class="delete-modal">
         <p>Delete message?</p>
-        <button class="cancel-button">CANCEL</button>
-        <button class="delete-button">DELETE FOR ME</button>
+        <div>
+          <button class="cancel-button">CANCEL</button>
+          <button class="delete-button">DELETE FOR ME</button>
+        </div>
       </div>
       <div class="chat-container">${chatItems.join('')}</div>
       <div id="chatInputContent">
