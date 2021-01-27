@@ -21,11 +21,11 @@ const addChatItemToDom = person => {
   const chatItem = `
     <div id="${itemId}" class="chat">
       <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
-      <div class="chat-item-overlay"></div>
       <div class="${person} chat-item">
         <div id="${person}" class="chat-text">
           <span class="message-value">${chatBoxValue}</span>
           <sub class="chat-time">${chatTime}</sub>
+          <button class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
         </div>
       </div>
     </div>
