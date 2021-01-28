@@ -30,7 +30,7 @@ const ChatPage = async () => {
           <div id="${person}" class="chat-text">
             <span class="message-value">${chatBoxValue}</span>
             <sub class="chat-time">${chatTime}</sub>
-            <button class="chat-item-dropdown" title="${itemId}"><i class="material-icons">&#xe313;</i><sup>
+            <button id="${itemId}" class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
           </div>
         </div>
       </div>
