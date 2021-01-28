@@ -43,7 +43,12 @@ i {
 }
 
 .profile-photo {
-  font-size: 0.7em;
+  height: 3em;
+  width: 3.2em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+  margin: 0.4em 1em 0 0;
 }
 
 button {
@@ -55,7 +60,7 @@ button {
 
 .image {
   height: 4em;
-  width: 4em;
+  width: 5em;
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
@@ -78,7 +83,7 @@ button {
 
 .chat-person-list {
   position: relative;
-  top: 21%;
+  top: 22%;
   height: auto;
   max-height: 31em;
   overflow-y: auto;
@@ -89,7 +94,8 @@ button {
   width: 100%;
 }
 
-.chat-person:hover {
+.chat-person:hover,
+.nav-dropdown-modal > button:hover {
   background-color: #EBEBEB;
 }
 
@@ -119,4 +125,24 @@ button {
 
 .chat-person-list::-webkit-scrollbar-thumb {
   background: #ccc;
+}
+
+.nav-dropdown-modal {
+  display: none;
+  position: fixed;
+  left: 15%;
+  background-color: #fff;
+  height: auto;
+  width: 12em;
+  border-radius: 0.2em;
+  padding: 1em 0;
+  box-shadow: 0 0 1em 0.3em #A9A9A8;
+}
+
+.nav-dropdown-modal > button {
+  display: block;
+  padding: 0.8em 1em;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
 }
