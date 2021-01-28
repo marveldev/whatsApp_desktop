@@ -24,7 +24,7 @@ const ChatPage = async () => {
   const chatItems = chatData.map(chatItem => {
     const { itemId, person, chatTime,  chatBoxValue } = chatItem
     return `
-      <div id="${itemId}">
+      <div class="${itemId}">
         <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
         <div class="${person} chat-item">
           <div id="${person}" class="chat-text">
