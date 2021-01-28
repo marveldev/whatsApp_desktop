@@ -1,12 +1,46 @@
 import { addEntryToDb } from "../../dataStorage.js"
 
+const deleteChatItem = () => {
+  const chatPageOverlay = document.querySelector('#chatPageOverlay')
+  const deleteModalButtons = document.querySelectorAll('.delete-modal-button')
+
+  chatPageOverlay.addEventListener('click', () => {
+    document.querySelector('#personOneDropdown').style.display = 'none'
+    document.querySelector('#personTwoDropdown').style.display = 'none'
+    chatPageOverlay.style.display = 'none'
+  })
+
+  for (let index = 0; index < deleteModalButtons.length; index++) {
+    const deleteModalButton = deleteModalButtons[index]
+    deleteModalButton.addEventListener('click', () => {
+      document.querySelector('.page-overlay').style.display = 'block'
+      document.querySelector('.delete-modal').style.display = 'block'
+      chatPageOverlay.style.display = 'none'
+      deleteModalButton.parentElement.style.display = 'none'
+    })
+  }
+
+  document.querySelector('.cancel-button').addEventListener('click', () => {
+    console.log('ok');
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('.page-overlay').style.display = 'none'
+  })
+
+
+  const deleteButton = document.querySelector('.delete-button')
+  deleteButton.addEventListener('click', () => {
+    console.log('dok');
+  })
+}
+
+
 const chatItemEvents = () => {
   const personOneDropdown = document.querySelector('#personOneDropdown')
   const personTwoDropdown = document.querySelector('#personTwoDropdown')
   const chatTexts = document.querySelectorAll('.chat-text')
   const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
-  const deleteModalButtons = document.querySelectorAll('.delete-modal-button')
+  let itemId
 
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
@@ -22,6 +56,7 @@ const chatItemEvents = () => {
   for (let index = 0; index < chatItemDropdowns.length; index++) {
     const chatItemDropdown = chatItemDropdowns[index];
     chatItemDropdown.addEventListener('click', (event) => {
+      itemId = chatItemDropdown.title
       const person = chatItemDropdown.parentElement.id
       const horizontalPosition = event.clientX
       const verticalPosition = event.clientY
@@ -37,43 +72,6 @@ const chatItemEvents = () => {
       }
     })
   }
-
-  for (let index = 0; index < deleteModalButtons.length; index++) {
-    const deleteModalButton = deleteModalButtons[index]
-    deleteModalButton.addEventListener('click', () => {
-      document.querySelector('.delete-modal').style.display = 'block'
-      document.querySelector('.page-overlay').style.display = 'block'
-      chatPageOverlay.style.display = 'none'
-      deleteModalButton.parentElement.style.display = 'none'
-    })
-  }
-
-  chatPageOverlay.addEventListener('click', () => {
-    personOneDropdown.style.display = 'none'
-    personTwoDropdown.style.display = 'none'
-    chatPageOverlay.style.display = 'none'
-  })
-
-  document.querySelector('.cancel-button').addEventListener('click', () => {
-    document.querySelector('.delete-modal').style.display = 'none'
-    document.querySelector('.page-overlay').style.display = 'none'
-  })
-
-  const deleteButton = document.querySelector('.delete-button')
-  deleteButton.addEventListener('click', () => {
-    // const chatContainer = document.querySelector('.chat-container')
-    // for (let index = 0; index < itemId.length; index++) {
-    //   const singleItemId = itemId[index]
-    //   const chatItemDiv = document.querySelector(`#${singleItemId}`)
-    //   chatContainer.removeChild(chatItemDiv)
-    // }
-    // singleChatNav.style.display = 'none'
-    // document.querySelector('.delete-modal').style.display = 'none'
-    // document.querySelector('#singleChatNav').style.display = 'flex'
-    // overlay.style.display = 'none'
-    // deleteEntry('chatData', itemId)
-    // itemId = []
-  })
 }
 
 const addChatItemToDom = person => {
@@ -93,7 +91,7 @@ const addChatItemToDom = person => {
         <div id="${person}" class="chat-text">
           <span class="message-value">${chatBoxValue}</span>
           <sub class="chat-time">${chatTime}</sub>
-          <button class="chat-item-dropdown ${itemId}"><i class="material-icons">&#xe313;</i><sup>
+          <button class="chat-item-dropdown" title="${itemId}"><i class="material-icons">&#xe313;</i><sup>
         </div>
       </div>
     </div>
@@ -115,7 +113,7 @@ const addChatItemToDom = person => {
   }
 
   addEntryToDb('chatData', chatObject)
-  chatItemEvents(person)
+  chatItemEvents()
 }
 
 const chatPageEvents = () => {
@@ -144,6 +142,7 @@ const chatPageEvents = () => {
 
   personOneChatButton.addEventListener('click', () => addChatItemToDom('person-one'))
   personTwoChatButton.addEventListener('click', () => addChatItemToDom('person-two'))
+  deleteChatItem()
 }
 
 export default chatPageEvents
