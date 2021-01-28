@@ -1,4 +1,4 @@
-import switchCurrentPage from "../helper.js"
+import switchCurrentPage from "../helper.js";
 
 const defaultNavEvents = () => {
   const chatPersonButtons = document.querySelectorAll('.chat-person')
@@ -11,6 +11,11 @@ const defaultNavEvents = () => {
 
   document.querySelector('.top-nav-dropdown').addEventListener('click', () => {
     document.querySelector('.nav-dropdown-modal').style.display = 'block'
+  })
+
+  document.querySelector('.settings-button').addEventListener('click', () => {
+    document.querySelector('.nav-dropdown-modal').style.display = 'none'
+    switchCurrentPage('settingsNav')
   })
 }
 
