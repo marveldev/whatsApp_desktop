@@ -27,7 +27,7 @@ const deleteChatItem = () => {
 
   const deleteButton = document.querySelector('.delete-button')
   deleteButton.addEventListener('click', () => {
-    const element = deleteButton.id
+    const element = deleteButton.title
     const chatContainer = document.querySelector('.chat-container')
     const chatItemDiv = document.querySelector(`.${element}`)
     chatContainer.removeChild(chatItemDiv)
@@ -61,7 +61,7 @@ const chatItemEvents = () => {
       const person = chatItemDropdown.parentElement.id
       const horizontalPosition = event.clientX
       const verticalPosition = event.clientY
-      document.querySelector('.delete-button').id = chatItemDropdown.title
+      document.querySelector('.delete-button').title = chatItemDropdown.id
       if (person === 'person-one') {
         personOneDropdown.style.display = 'block'
         personOneDropdown.style.top = verticalPosition + 'px'
@@ -93,7 +93,7 @@ const addChatItemToDom = person => {
         <div id="${person}" class="chat-text">
           <span class="message-value">${chatBoxValue}</span>
           <sub class="chat-time">${chatTime}</sub>
-          <button class="chat-item-dropdown" title="${itemId}"><i class="material-icons">&#xe313;</i><sup>
+          <button id="${itemId}" class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
         </div>
       </div>
     </div>
