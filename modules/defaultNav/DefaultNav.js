@@ -14,7 +14,7 @@ const DefaultNav = () => {
           <button>Profile</button>
           <button>Archived</button>
           <button>Starred</button>
-          <button>Settings</button>
+          <button class="settings-button">Settings</button>
           <button>Log out</button>
         </div>
         <div id="searchBoxContainer">
