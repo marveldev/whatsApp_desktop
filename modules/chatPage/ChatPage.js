@@ -30,7 +30,7 @@ const ChatPage = async () => {
           <div id="${person}" class="chat-text">
             <span class="message-value">${chatBoxValue}</span>
             <sub class="chat-time">${chatTime}</sub>
-            <button class="chat-item-dropdown ${itemId}"><i class="material-icons">&#xe313;</i><sup>
+            <button class="chat-item-dropdown" title="${itemId}"><i class="material-icons">&#xe313;</i><sup>
           </div>
         </div>
       </div>
@@ -58,6 +58,8 @@ const ChatPage = async () => {
           <button class="delete-button">DELETE FOR ME</button>
         </div>
       </div>
+      ${personOneDropDown}
+      ${personTwoDropDown}
       <div class="chat-container">${chatItems.join('')}</div>
       <div id="chatInputContent">
         <div>
@@ -76,8 +78,6 @@ const ChatPage = async () => {
           <button type="button" class="person-two-button">Person2</button>
         </span>
       </div>
-      ${personOneDropDown}
-      ${personTwoDropDown}
     </div>
   `
 }
