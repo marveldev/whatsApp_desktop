@@ -229,7 +229,7 @@
   left: 6%;
   background-color: #fff;
   width: 35%;
-  height: 20%;
+  height: auto;
   z-index: 2;
   font-size: 1.3em;
   box-shadow: 0 0 1em 0.3em #A9A9A8;
