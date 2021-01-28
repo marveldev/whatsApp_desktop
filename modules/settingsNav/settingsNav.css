@@ -1,0 +1,65 @@
+.settings-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+}
+
+.settings-header {
+  background-color: #00BFA5;
+  color: #fff;
+  height: 6em;
+  font-size: 1.1em;
+}
+
+.back-button {
+  margin: 5em 1.5em;
+  vertical-align: middle
+}
+
+.back-button i {
+  color: #fff;
+}
+
+.profile-settings {
+  display: flex;
+  padding: 1em 1.5em;
+}
+
+.profile-settings .status-info {
+  border-bottom: none;
+  margin-top: 0.8em;
+}
+
+.theme-container {
+  display: none;
+}
+
+.chat-settings-options > button {
+  display: flex;
+  text-align: left;
+  padding: 0 1em;
+  width: 100%;
+}
+
+.chat-settings-options p {
+  margin: 0;
+  padding: 1.3em 0;
+  font-size: 1.2em;
+  width: 100%;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.chat-settings-options span {
+  padding: 1.3em;
+}
+
+.chat-settings-options > button:last-of-type p {
+  border: none;
+}
+
+.profile-settings .image {
+  font-size: 1.3em;
+  width: 5.5em;
+}
