@@ -8,6 +8,10 @@ const defaultNavEvents = () => {
       switchCurrentPage('chatPage')
     })
   }
+
+  document.querySelector('.top-nav-dropdown').addEventListener('click', () => {
+    document.querySelector('.nav-dropdown-modal').style.display = 'block'
+  })
 }
 
 export default defaultNavEvents
