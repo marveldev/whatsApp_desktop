@@ -1,4 +1,4 @@
-import { addEntryToDb } from "../../dataStorage.js"
+import { addEntryToDb, deleteEntry } from "../../dataStorage.js"
 
 const deleteChatItem = () => {
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
@@ -21,18 +21,21 @@ const deleteChatItem = () => {
   }
 
   document.querySelector('.cancel-button').addEventListener('click', () => {
-    console.log('ok');
     document.querySelector('.delete-modal').style.display = 'none'
     document.querySelector('.page-overlay').style.display = 'none'
   })
 
-
   const deleteButton = document.querySelector('.delete-button')
   deleteButton.addEventListener('click', () => {
-    console.log('dok');
+    const element = deleteButton.id
+    const chatContainer = document.querySelector('.chat-container')
+    const chatItemDiv = document.querySelector(`.${element}`)
+    chatContainer.removeChild(chatItemDiv)
+    document.querySelector('.delete-modal').style.display = 'none'
+    document.querySelector('.page-overlay').style.display = 'none'
+    deleteEntry('chatData', element)
   })
 }
-
 
 const chatItemEvents = () => {
   const personOneDropdown = document.querySelector('#personOneDropdown')
@@ -40,7 +43,6 @@ const chatItemEvents = () => {
   const chatTexts = document.querySelectorAll('.chat-text')
   const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
-  let itemId
 
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
@@ -56,10 +58,10 @@ const chatItemEvents = () => {
   for (let index = 0; index < chatItemDropdowns.length; index++) {
     const chatItemDropdown = chatItemDropdowns[index];
     chatItemDropdown.addEventListener('click', (event) => {
-      itemId = chatItemDropdown.title
       const person = chatItemDropdown.parentElement.id
       const horizontalPosition = event.clientX
       const verticalPosition = event.clientY
+      document.querySelector('.delete-button').id = chatItemDropdown.title
       if (person === 'person-one') {
         personOneDropdown.style.display = 'block'
         personOneDropdown.style.top = verticalPosition + 'px'
@@ -85,7 +87,7 @@ const addChatItemToDom = person => {
   const chatTime = new Date().toTimeString().substr(0, 5)
 
   const chatItem = `
-    <div id="${itemId}">
+    <div class="${itemId}">
       <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
       <div class="${person} chat-item">
         <div id="${person}" class="chat-text">
