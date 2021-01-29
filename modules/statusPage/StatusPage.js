@@ -15,6 +15,21 @@ const StatusPage = async () => {
     }
   })
 
+  const statusTextItems = statusData.map(statusTextItem => {
+    const { textValue, entryBackgroundColor } = statusTextItem
+    if (textValue.length >= 1) {
+      return `
+        <div class="status-entry-item">
+          <button class="delete-entry-button">X</button>
+          <div class="status-text" style="background-color:${entryBackgroundColor};">
+            ${textValue}
+          </div>
+          <small>today</small>
+        </div>
+      `
+    }
+  })
+
   return `
     <div class="status-page">
       <button id="closeButton">X</button>
@@ -24,6 +39,7 @@ const StatusPage = async () => {
         </p>
         <div class="status-entry-container">
           ${statusPhotoItems.join('') || ''}
+          ${statusTextItems.join('') || ''}
         </div>
       </div>
     </div>
