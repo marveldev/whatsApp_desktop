@@ -9,7 +9,7 @@ request.onupgradeneeded = () => {
   const database = request.result
   // database.createObjectStore('chatPageBackground', { autoIncrement: true })
   database.createObjectStore('chatData', { keyPath: 'itemId' })
-  // database.createObjectStore('statusData', { keyPath: 'itemId' })
+  database.createObjectStore('statusData', { keyPath: 'itemId' })
 }
 
 request.onerror = () => {
