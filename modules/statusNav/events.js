@@ -56,12 +56,9 @@ const statusNavEvent = () => {
   //   }
   // })
 
-  // document.querySelector('#addTextButton').addEventListener('click', () => {
-  //   topNav.style.display = 'none'
-  //   statusMainContent.style.display = 'none'
-  //   statusTextContainer.style.display = 'block'
-  //   statusTextInput.focus()
-  // })
+  document.querySelector('#addTextStatusButton').addEventListener('click', () => {
+    switchCurrentPage('statusTextEntry')
+  })
 
   // document.querySelector('#backButton').addEventListener('click', () => {
   //   topNav.style.display = 'block'
