@@ -54,3 +54,18 @@
   margin: 0.5em;
   color: #fff;
 }
+
+.status-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #fff;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  max-width: 4em;
+  margin: 0 0 0.2em 0.7em;
+  word-break: break-all;
+  overflow: hidden;
+}
