@@ -1,8 +1,12 @@
-const StatusNav = () => {
+import { getEntryFromDb } from "../../dataStorage.js"
+
+const StatusNav = async () => {
+  const statusData = await getEntryFromDb('statusData')
+
   return `
     <div class="status-nav">
       <input type="file" id="addPhotoStatus">
-      <button class="add-status photo-button">
+      <button class="add-status photo-button" style="display:${statusData.length >= 1 ? 'none' : 'flex'};">
         <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
           class="image" alt="photo">
         <div class="status-info">
@@ -12,7 +16,7 @@ const StatusNav = () => {
           </label>
         </div>
       </button>
-      <button class="view-status photo-button">
+      <button class="view-status photo-button" style="display:${statusData.length >= 1 ? 'flex' : 'none'};">
         <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
           class="image" alt="photo">
         <div class="status-info">
