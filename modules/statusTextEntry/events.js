@@ -23,7 +23,6 @@ const statusTextEntryEvent = () => {
   })
 
   document.querySelector('#sendTextButton').addEventListener('click', () => {
-    console.log('ok');
     const textValue = statusTextInput.value
     const entryBackgroundColor = statusTextContainer.style.backgroundColor || '#1C8B82'
     addStatusFile(textValue, null, entryBackgroundColor)
