@@ -1,4 +1,5 @@
 import { addEntryToDb } from "../../dataStorage.js"
+import switchCurrentPage from "../helper.js"
 
 const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
   const itemId = 'id' + Date.parse(new Date()).toString()
@@ -45,31 +46,9 @@ const statusNavEvent = () => {
     })
   })
 
-  // const statusTextInput = document.querySelector('#statusTextInput')
-  // statusTextInput.addEventListener('keyup', () => {
-  //   statusTextInput.style.height = "1px"
-  //   statusTextInput.style.height = (3+statusTextInput.scrollHeight)+"px"
-  //   if (statusTextInput.value.trim().length >= 1) {
-  //     document.querySelector('#sendTextButton').style.display = 'block'
-  //   } else {
-  //     document.querySelector('#sendTextButton').style.display = 'none'
-  //   }
-  // })
-
   document.querySelector('#addTextStatusButton').addEventListener('click', () => {
     switchCurrentPage('statusTextEntry')
   })
-
-  // document.querySelector('#backButton').addEventListener('click', () => {
-  //   topNav.style.display = 'block'
-  //   statusMainContent.style.display = 'block'
-  //   statusTextContainer.style.display = 'none'
-  // })
-
-  // document.querySelector('#colorButton').addEventListener('click', () => {
-  //   const randomColor = Math.floor(Math.random()*16777215).toString(16)
-  //   statusTextContainer.style.backgroundColor = "#" + randomColor
-  // })
 }
 
 export default statusNavEvent
