@@ -7,6 +7,7 @@ import SettingsNav from "./settingsNav/settingsNav.js"
 import settingsNavEvents from "./settingsNav/events.js"
 import StatusPage from "./statusPage/statusPage.js"
 import StatusNav from "./statusNav/StatusNav.js"
+import statusPageEvent from "./statusPage/events.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
@@ -29,6 +30,12 @@ const switchCurrentPage = async (page) => {
     case 'statusPage':
       currentNav.innerHTML = StatusNav()
       currentPage.innerHTML = StatusPage()
+      statusPageEvent()
+      break;
+    case 'defaultPage':
+      currentNav.innerHTML = DefaultNav()
+      currentPage.innerHTML = DefaultPage()
+      defaultNavEvents()
       break;
     default:
       currentPage.innerHTML = DefaultPage()
