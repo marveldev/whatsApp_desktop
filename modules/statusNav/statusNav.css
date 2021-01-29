@@ -8,16 +8,11 @@
 }
 
 .photo-button {
-  display: flex;
   margin: 3em 0;
   color: #fff;
   width: 100%;
   padding: 0 0 1.5em 1em;
   border-bottom: 1px solid #434343;
-}
-
-.view-status {
-  display: none;
 }
 
 .photo-button .status-info {
