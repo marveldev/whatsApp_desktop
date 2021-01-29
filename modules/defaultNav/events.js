@@ -17,6 +17,11 @@ const defaultNavEvents = () => {
     document.querySelector('.nav-dropdown-modal').style.display = 'none'
     switchCurrentPage('settingsNav')
   })
+
+  document.querySelector('.status-button').addEventListener('click', () => {
+    switchCurrentPage('statusPage')
+    console.log('ok');
+  })
 }
 
 export default defaultNavEvents
