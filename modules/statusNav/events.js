@@ -7,8 +7,12 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
 
   if (textValue) {
     statusData =  `
-      <div class="status-text status-data" style="background-color:${entryBackgroundColor};">
-        ${textValue}
+      <div class="status-entry-item">
+        <button class="delete-entry-button">X</button>
+        <div class="status-text" style="background-color:${entryBackgroundColor};">
+          ${textValue}
+        </div>
+        <small>today</small>
       </div>
     `
   } else {
@@ -52,3 +56,4 @@ const statusNavEvent = () => {
 }
 
 export default statusNavEvent
+export { addStatusFile }
