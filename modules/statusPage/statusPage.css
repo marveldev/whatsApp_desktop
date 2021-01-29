@@ -1,0 +1,26 @@
+.status-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #000;
+}
+
+.status-page > div {
+  text-align: center;
+  width: 50%;
+  margin: 10em auto;
+  color: #fff;
+  background-color: aqua;
+  padding: 2em 0;
+}
+
+.status-page button {
+  color: #fff;
+}
+
+#defaultPage > p {
+  font-size: 2em;
+  margin: 0 0 0.5em;
+}
