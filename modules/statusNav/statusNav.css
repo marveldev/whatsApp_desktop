@@ -1,0 +1,64 @@
+.status-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background-color: #141414;
+}
+
+.photo-button {
+  display: flex;
+  margin: 3em 0;
+  color: #fff;
+  width: 100%;
+  padding: 0 0 1.5em 1em;
+  border-bottom: 1px solid #434343;
+}
+
+.view-status {
+  display: none;
+}
+
+.photo-button .status-info {
+  border: none;
+}
+
+.add-status-button {
+  position: absolute;
+  bottom: 5em;
+  right: 2em;
+}
+
+#addPhotoStatusButton {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 2em;
+  font-size: 1.2em;
+  background-color: #1C8B82;
+  box-shadow: 0 0.2em 0.2em 0em #00000060;
+}
+
+#addPhotoStatusButton > i {
+  padding: 0.9em;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+#addTextStatusButton {
+  width: 3em;
+  height: 3em;
+  margin: 0 0 1em 0.8em;
+  border-radius: 1.5em;
+  background-color: #f0e9e9;
+  box-shadow: 0 0.2em 0.4em 0em #000000d5;
+}
+
+#addTextStatusButton > i {
+  vertical-align: middle;
+  color: #000;
+}
+
+#addPhotoStatus {
+  display: none;
+}
