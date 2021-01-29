@@ -9,10 +9,11 @@
 
 .view-update-page {
   text-align: center;
-  width: 50%;
-  margin: 8em auto;
+  width: 80%;
+  margin: 5em auto;
+  height: auto;
   color: #fff;
-  padding: 2em 0;
+  padding-top: 1em;
 }
 
 .status-page p {
@@ -21,12 +22,17 @@
 
 .status-entry-item {
   display: grid;
-  width: fit-content;
+  margin: 1em 0;
+  width: 7em;
 }
 
 .status-entry-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0 1em;
+  height: auto;
+  width: fit-content;
+  margin: auto;
 }
 
 .status-entry {
@@ -36,6 +42,7 @@
 }
 
 .delete-entry-button {
+  display: none;
   font-size: 1em;
   text-align: right;
   color: #fff;
