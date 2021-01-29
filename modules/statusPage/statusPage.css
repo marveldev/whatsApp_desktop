@@ -7,20 +7,43 @@
   background-color: #000;
 }
 
-.status-page > div {
+.view-update-page {
   text-align: center;
   width: 50%;
-  margin: 10em auto;
+  margin: 8em auto;
   color: #fff;
-  background-color: aqua;
   padding: 2em 0;
 }
 
-.status-page button {
+.status-page p {
+  font-size: 1.5em;
+}
+
+.status-entry-item {
+  display: grid;
+  width: fit-content;
+}
+
+.status-entry-container {
+  display: flex;
+  justify-content: center;
+}
+
+.status-entry {
+  max-width: 4em;
+  margin: 0 0 0.5em 1em;
+  font-size: 1.2em;
+}
+
+.delete-entry-button {
+  font-size: 1em;
+  text-align: right;
   color: #fff;
 }
 
-#defaultPage > p {
-  font-size: 2em;
-  margin: 0 0 0.5em;
+#closeButton {
+  font-size: 1.5em;
+  float: right;
+  margin: 0.5em;
+  color: #fff;
 }
