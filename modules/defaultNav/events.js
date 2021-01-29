@@ -20,7 +20,6 @@ const defaultNavEvents = () => {
 
   document.querySelector('.status-button').addEventListener('click', () => {
     switchCurrentPage('statusPage')
-    console.log('ok');
   })
 }
 
