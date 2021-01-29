@@ -29,10 +29,10 @@ const switchCurrentPage = async (page) => {
       chatItemEvents()
       break;
     case 'statusPage':
+      currentPage.innerHTML = await StatusPage()
       currentNav.innerHTML = StatusNav()
-      currentPage.innerHTML = StatusPage()
-      statusNavEvent()
       statusPageEvent()
+      statusNavEvent()
       break;
     case 'defaultPage':
       currentNav.innerHTML = DefaultNav()
