@@ -1,16 +1,29 @@
-const StatusPage = () => {
+import { getEntryFromDb } from "../../dataStorage.js"
+
+const StatusPage = async () => {
+  const statusData = await getEntryFromDb('statusData')
+  const statusPhotoItems = statusData.map(statusPhotoItem => {
+    const { photoSource } = statusPhotoItem
+    if (photoSource) {
+      return `
+        <div class="status-entry-item">
+          <button class="delete-entry-button">X</button>
+          <img src="${photoSource}" class="status-entry image" alt="photo">
+          <small>today</small>
+        </div>
+      `
+    }
+  })
+
   return `
     <div class="status-page">
       <button id="closeButton">X</button>
       <div class="view-update-page">
-        <p>View your updates</p>
+        <p id="statusMessage">
+          ${statusData.length == 0 ? "You've not added any status yet": 'View your update'}
+        </p>
         <div class="status-entry-container">
-          <div class="status-entry-item">
-            <button class="delete-entry-button">X</button>
-            <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-              class="status-entry image" alt="photo">
-            <small>yesterday at 16:14</small>
-          </div>
+          ${statusPhotoItems.join('') || ''}
         </div>
       </div>
     </div>
