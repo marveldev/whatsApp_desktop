@@ -45,34 +45,34 @@ const statusNavEvent = () => {
     })
   })
 
-  const statusTextInput = document.querySelector('#statusTextInput')
-  statusTextInput.addEventListener('keyup', () => {
-    statusTextInput.style.height = "1px"
-    statusTextInput.style.height = (3+statusTextInput.scrollHeight)+"px"
-    if (statusTextInput.value.trim().length >= 1) {
-      document.querySelector('#sendTextButton').style.display = 'block'
-    } else {
-      document.querySelector('#sendTextButton').style.display = 'none'
-    }
-  })
+  // const statusTextInput = document.querySelector('#statusTextInput')
+  // statusTextInput.addEventListener('keyup', () => {
+  //   statusTextInput.style.height = "1px"
+  //   statusTextInput.style.height = (3+statusTextInput.scrollHeight)+"px"
+  //   if (statusTextInput.value.trim().length >= 1) {
+  //     document.querySelector('#sendTextButton').style.display = 'block'
+  //   } else {
+  //     document.querySelector('#sendTextButton').style.display = 'none'
+  //   }
+  // })
 
-  document.querySelector('#addTextButton').addEventListener('click', () => {
-    topNav.style.display = 'none'
-    statusMainContent.style.display = 'none'
-    statusTextContainer.style.display = 'block'
-    statusTextInput.focus()
-  })
+  // document.querySelector('#addTextButton').addEventListener('click', () => {
+  //   topNav.style.display = 'none'
+  //   statusMainContent.style.display = 'none'
+  //   statusTextContainer.style.display = 'block'
+  //   statusTextInput.focus()
+  // })
 
-  document.querySelector('#backButton').addEventListener('click', () => {
-    topNav.style.display = 'block'
-    statusMainContent.style.display = 'block'
-    statusTextContainer.style.display = 'none'
-  })
+  // document.querySelector('#backButton').addEventListener('click', () => {
+  //   topNav.style.display = 'block'
+  //   statusMainContent.style.display = 'block'
+  //   statusTextContainer.style.display = 'none'
+  // })
 
-  document.querySelector('#colorButton').addEventListener('click', () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16)
-    statusTextContainer.style.backgroundColor = "#" + randomColor
-  })
+  // document.querySelector('#colorButton').addEventListener('click', () => {
+  //   const randomColor = Math.floor(Math.random()*16777215).toString(16)
+  //   statusTextContainer.style.backgroundColor = "#" + randomColor
+  // })
 }
 
 export default statusNavEvent
