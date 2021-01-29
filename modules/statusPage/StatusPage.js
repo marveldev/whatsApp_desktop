@@ -1,8 +1,8 @@
 const StatusPage = () => {
   return `
     <div class="status-page">
-      <button>X</button>
-      <div>
+      <button id="closeButton">X</button>
+      <div class="view-update-page">
         <p>View your updates</p>
         <div class="status-entry-container">
           <div class="status-entry-item">
