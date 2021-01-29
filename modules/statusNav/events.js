@@ -27,8 +27,8 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
 
   document.querySelector('#statusMessage').innerHTML = 'View your update'
   document.querySelector('.status-entry-container').innerHTML += statusData
-  document.querySelector('.view-status').style.display = 'flex'
-  document.querySelector('.add-status').style.display = 'none'
+  // document.querySelector('.view-status').style.display = 'flex'
+  // document.querySelector('.add-status').style.display = 'none'
 
   const statusObject = {
     itemId: itemId,
