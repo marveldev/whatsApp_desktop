@@ -4,8 +4,8 @@ const DefaultNav = () => {
       <div class="top-nav">
         <div class="top-nav-buttons">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="profile-photo" alt="">
-          <button><i class="material-icons">&#xe1af;</i></button>
-          <button class=""><i class="material-icons">&#xe0b7;</i></button>
+          <button class="status-button"><i class="material-icons">&#xe1af;</i></button>
+          <button><i class="material-icons">&#xe0b7;</i></button>
           <button class="top-nav-dropdown"><i class="material-icons">&#xe5d4;</i></button>
         </div>
         <div class="nav-dropdown-modal">
