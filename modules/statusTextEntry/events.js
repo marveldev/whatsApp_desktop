@@ -16,6 +16,7 @@ const statusTextEntryEvent = () => {
   document.querySelector('#backButton').addEventListener('click', () => {
     switchCurrentPage('statusPage')
     document.querySelector('.page-overlay').style.display = 'none'
+    document.querySelector('.page-overlay').style.backgroundColor = '#fbfaf9b4'
   })
 
   document.querySelector('#colorButton').addEventListener('click', () => {
@@ -29,6 +30,7 @@ const statusTextEntryEvent = () => {
     addStatusFile(textValue, null, entryBackgroundColor)
     statusTextInput.value = ''
     document.querySelector('.page-overlay').style.display = 'none'
+    document.querySelector('.page-overlay').style.backgroundColor = '#fbfaf9b4'
     switchCurrentPage('statusPage')
   })
 }
