@@ -8,7 +8,7 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
   if (textValue) {
     statusData =  `
       <div class="status-entry-item">
-        <button class="delete-entry-button">X</button>
+        <button class="delete-entry-button"><i class="fa fa-trash"></i></button>
         <div class="status-text" style="background-color:${entryBackgroundColor};">
           ${textValue}
         </div>
@@ -18,7 +18,7 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
   } else {
     statusData =  `
       <div class="status-entry-item">
-        <button class="delete-entry-button">X</button>
+        <button class="delete-entry-button"><i class="fa fa-trash"></i></button>
         <img src="${photoSource}" class="status-entry image" alt="photo">
         <small>today</small>
       </div>
