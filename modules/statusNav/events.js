@@ -53,6 +53,13 @@ const statusNavEvent = () => {
   document.querySelector('#addTextStatusButton').addEventListener('click', () => {
     switchCurrentPage('statusTextEntry')
     document.querySelector('.page-overlay').style.display = 'block'
+    document.querySelector('.page-overlay').style.backgroundColor = '#00000085'
+  })
+
+  document.querySelector('.view-status').addEventListener('click', () => {
+    document.querySelector('.current-nav').style.display = 'none'
+    switchCurrentPage('viewStatusPage')
+    
   })
 }
 
