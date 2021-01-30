@@ -48,6 +48,10 @@
   color: #fff;
 }
 
+.delete-entry-button > i {
+  color: #fff;
+}
+
 #closeButton {
   font-size: 1.5em;
   float: right;
