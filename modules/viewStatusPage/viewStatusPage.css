@@ -42,7 +42,34 @@
 
 .entry-container {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
+  width: 50%;
+  height: 100%;
   transform: translate(-50%, -50%);
+}
+
+.entry-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #000000d7;
+}
+
+.progress-bar { 
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 0.5em;
+  background-color: #ddd;
+}
+
+.bar {
+  width: 1%;
+  height: 0.5em;
+  background-color:#808080bc;
+}
+
+.status-item {
+  display: none;
 }
