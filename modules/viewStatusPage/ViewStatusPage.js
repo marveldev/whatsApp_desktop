@@ -8,8 +8,7 @@ const viewStatusPage = async () => {
       return `
         <div class="status-item">
           <div class="progress-bar"><div class="bar"></div></div>
-          <img src="${photoSource}"
-            class="entry-photo" alt="photo">
+          <img src="${photoSource}" class="entry-photo" alt="photo">
         </div>
       `
     }
@@ -21,7 +20,7 @@ const viewStatusPage = async () => {
       return `
         <div class="status-item">
           <div class="progress-bar"><div class="bar"></div></div>
-          <div class="status-text" style="background-color:${entryBackgroundColor};">
+          <div class="entry-text" style="background-color:${entryBackgroundColor};">
             ${textValue}
           </div>
         </div>
@@ -35,8 +34,8 @@ const viewStatusPage = async () => {
       <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
       <button class="close-button">X</button>
       <div class="entry-container">
-        ${statusPhotoItems.join()}
-        ${statusTextItems.join()}
+        ${statusPhotoItems.join('')}
+        ${statusTextItems.join('')}
       </div>
     </div>
   `
