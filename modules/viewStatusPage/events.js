@@ -3,8 +3,6 @@ import switchCurrentPage from "../helper.js"
 const viewStatusPageEvent = () => {
   document.querySelector('.entry-container').firstElementChild.classList.add('current')
   const entryBackground = document.querySelector('#entryBackground')
-  const photoSource = document.querySelector('.current').lastElementChild.src
-  entryBackground.style.backgroundImage = `url(${photoSource})`
 
   const bars = document.querySelectorAll('.bar')
   let width = 1
@@ -15,8 +13,12 @@ const viewStatusPageEvent = () => {
       currentSlide.classList.remove('current')
       if (currentSlide.nextElementSibling) {
         currentSlide.nextElementSibling.classList.add('current')
-        const photoSource = document.querySelector('.current').lastElementChild.src
-        document.querySelector('#entryBackground').style.backgroundImage = `url(${photoSource})`
+        const entry = document.querySelector('.current').lastElementChild
+        if (entry.className === 'entry-text') {
+          entryBackground.style.backgroundColor = entry.style.backgroundColor
+        } else {
+          entryBackground.style.backgroundImage = `url(${entry.src})`
+        }
         width = 1
       } else {
         slides[0].classList.add('current')
