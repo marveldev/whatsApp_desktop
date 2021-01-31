@@ -30,12 +30,14 @@ const viewStatusPage = async () => {
 
   return `
     <div class="view-status-page">
-      <div id="entryBackground"></div>
+      <div id="entryBackground" style="background-image:url(${statusData[0].photoSource || ''});
+        background-color:${statusData[0].entryBackgroundColor || ''};">
+      </div>
       <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
       <button class="close-button">X</button>
       <div class="entry-container">
-        ${statusPhotoItems.join('')}
         ${statusTextItems.join('')}
+        ${statusPhotoItems.join('')}
       </div>
     </div>
   `
