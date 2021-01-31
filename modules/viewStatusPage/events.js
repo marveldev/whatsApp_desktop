@@ -1,27 +1,33 @@
 import switchCurrentPage from "../helper.js"
 
 const viewStatusPageEvent = () => {
-  document.querySelector('.entry-container').firstElementChild.classList.add('current')
   const entryBackground = document.querySelector('#entryBackground')
+  document.querySelector('.entry-container').firstElementChild.classList.add('current')
+
+  const addEntryBackground = () => {
+    const entry = document.querySelector('.current').lastElementChild
+    if (entry.className === 'entry-text') {
+      entryBackground.style.backgroundColor = entry.style.backgroundColor
+    } else {
+      entryBackground.style.backgroundImage = `url(${entry.src})`
+    }
+  }
+
+  addEntryBackground()
 
   const bars = document.querySelectorAll('.bar')
   let width = 1
   let interval = setInterval(() => {
     if (width >= 100) {
-      const slides = document.querySelectorAll('.status-item')
-      const currentSlide = document.querySelector('.current')
-      currentSlide.classList.remove('current')
-      if (currentSlide.nextElementSibling) {
-        currentSlide.nextElementSibling.classList.add('current')
-        const entry = document.querySelector('.current').lastElementChild
-        if (entry.className === 'entry-text') {
-          entryBackground.style.backgroundColor = entry.style.backgroundColor
-        } else {
-          entryBackground.style.backgroundImage = `url(${entry.src})`
-        }
+      const statusItems = document.querySelectorAll('.status-item')
+      const currentStatusItem = document.querySelector('.current')
+      currentStatusItem.classList.remove('current')
+      if (currentStatusItem.nextElementSibling) {
+        currentStatusItem.nextElementSibling.classList.add('current')
+        addEntryBackground()
         width = 1
       } else {
-        slides[0].classList.add('current')
+        statusItems[0].classList.add('current')
         document.querySelector('.current-nav').style.display = 'block'
         switchCurrentPage('statusPage')
         clearInterval(interval)
