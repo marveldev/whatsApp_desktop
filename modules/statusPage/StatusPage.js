@@ -38,8 +38,8 @@ const StatusPage = async () => {
           ${statusData.length == 0 ? "You've not added any status yet": 'View your update'}
         </p>
         <div class="status-entry-container">
-          ${statusPhotoItems.join('') || ''}
           ${statusTextItems.join('') || ''}
+          ${statusPhotoItems.join('') || ''}
         </div>
       </div>
     </div>
