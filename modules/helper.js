@@ -12,6 +12,7 @@ import statusNavEvent from "./statusNav/events.js"
 import statusTextEntry from "./statusTextEntry/statusTextEntry.js"
 import statusTextEntryEvent from "./statusTextEntry/events.js"
 import viewStatusPage from "./viewStatusPage/ViewStatusPage.js"
+import viewStatusPageEvent from "./viewStatusPage/events.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
@@ -43,6 +44,7 @@ const switchCurrentPage = async (page) => {
       break;
     case 'viewStatusPage':
       currentPage.innerHTML = viewStatusPage()
+      viewStatusPageEvent()
       break;
     case 'defaultPage':
       currentNav.innerHTML = DefaultNav()
