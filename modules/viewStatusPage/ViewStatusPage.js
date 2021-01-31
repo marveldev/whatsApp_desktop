@@ -30,9 +30,7 @@ const viewStatusPage = async () => {
 
   return `
     <div class="view-status-page">
-      <div id="entryBackground" style="background-image:url(${statusData[0].photoSource || ''});
-        background-color:${statusData[0].entryBackgroundColor || ''};">
-      </div>
+      <div id="entryBackground"></div>
       <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
       <button class="close-button">X</button>
       <div class="entry-container">
