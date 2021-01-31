@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #4d4847;
+  background-color: #141414;
 }
 
 #entryBackground {
@@ -19,7 +19,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-image: url("https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
 }
 
 .previous-button i {
@@ -85,4 +84,5 @@
   height: 100%;
   font-size: 1.5em;
   color: #fff;
+  box-shadow: 0 0 0.5em 0 #000;
 }
