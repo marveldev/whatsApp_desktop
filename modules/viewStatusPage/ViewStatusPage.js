@@ -1,12 +1,42 @@
-const viewStatusPage = () => {
+import { getEntryFromDb } from "../../dataStorage.js"
+
+const viewStatusPage = async () => {
+  const statusData = await getEntryFromDb('statusData')
+  const statusPhotoItems = statusData.map(statusPhotoItem => {
+    const { photoSource } = statusPhotoItem
+    if (photoSource) {
+      return `
+        <div class="status-item">
+          <div class="progress-bar"><div class="bar"></div></div>
+          <img src="${photoSource}"
+            class="entry-photo" alt="photo">
+        </div>
+      `
+    }
+  })
+
+  const statusTextItems = statusData.map(statusTextItem => {
+    const { textValue, entryBackgroundColor } = statusTextItem
+    if (textValue.length >= 1) {
+      return `
+        <div class="status-item">
+          <div class="progress-bar"><div class="bar"></div></div>
+          <div class="status-text" style="background-color:${entryBackgroundColor};">
+            ${textValue}
+          </div>
+        </div>
+      `
+    }
+  })
+
   return `
     <div class="view-status-page">
       <div id="entryBackground"></div>
       <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
       <button class="close-button">X</button>
       <div class="entry-container">
-        <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          class="entry-photo" alt="photo">
+        ${statusPhotoItems.join()}
+        ${statusTextItems.join()}
       </div>
     </div>
   `
