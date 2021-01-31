@@ -43,7 +43,7 @@ const switchCurrentPage = async (page) => {
       statusTextEntryEvent()
       break;
     case 'viewStatusPage':
-      currentPage.innerHTML = viewStatusPage()
+      currentPage.innerHTML = await viewStatusPage()
       viewStatusPageEvent()
       break;
     case 'defaultPage':
