@@ -31,8 +31,12 @@ const viewStatusPage = async () => {
   return `
     <div class="view-status-page">
       <div id="entryBackground"></div>
-      <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
-      <button class="close-button">X</button>
+      <div class="button-container">
+        <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
+        <button class="close-button">X</button>
+        <button id="previousButton"><i class="material-icons">&#xe314;</i></button>
+        <button id="nextButton"><i class="material-icons">&#xe315;</i></button>
+      </div>
       <div class="entry-container">
         ${statusTextItems.join('')}
         ${statusPhotoItems.join('')}
