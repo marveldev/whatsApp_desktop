@@ -21,9 +21,24 @@
   background-size: cover;
 }
 
-.previous-button i {
+.button-container i {
   color: #fff;
   font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#previousButton {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  font-size: 1.4em;
+}
+
+#nextButton {
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  font-size: 1.4em;
 }
 
 .previous-button {
