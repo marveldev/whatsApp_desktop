@@ -1,4 +1,5 @@
 import { addEntryToDb, deleteEntry } from "../../dataStorage.js"
+import switchCurrentPage from "../helper.js"
 
 const deleteChatItem = () => {
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
@@ -76,13 +77,13 @@ const chatItemEvents = () => {
   }
 }
 
-const addChatItemToDom = person => {
+const addChatItemToDom = (person, message) => {
   const chatContainer = document.querySelector('.chat-container')
   const personContainerButton = document.querySelector('.person-button-container')
   const recordButton = document.querySelector('.record-button')
   const sendChatButton = document.querySelector('.send-button')
   const chatBox = document.querySelector('.chat-box')
-  const chatBoxValue = chatBox.value.trim()
+  const chatBoxValue = chatBox.value.trim() || message
   const itemId = 'id' + Date.parse(new Date()).toString()
   const chatTime = new Date().toTimeString().substr(0, 5)
 
@@ -148,4 +149,4 @@ const chatPageEvents = () => {
 }
 
 export default chatPageEvents
-export { chatItemEvents }
+export { chatItemEvents, addChatItemToDom }
