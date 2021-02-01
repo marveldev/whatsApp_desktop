@@ -73,3 +73,21 @@
   word-break: break-all;
   overflow: hidden;
 }
+
+.status-delete-modal {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  background-color: #fff;
+  width: 50%;
+  z-index: 2;
+  padding: 0.5em 1.5em 1.5em 1.5em;
+}
+
+.status-delete-modal > button {
+  float: right;
+  color: #186d60fa;
+  font-weight: 550;
+  padding: 0.5em 1em;
+}
