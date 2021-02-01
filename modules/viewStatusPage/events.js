@@ -1,10 +1,10 @@
 import switchCurrentPage from "../helper.js"
 
 const viewStatusPageEvent = () => {
-  document.querySelector('.entry-container').firstElementChild.classList.add('current')
   const statusItems = document.querySelectorAll('.status-item')
   const bars = document.querySelectorAll('.bar')
-  let width = 1
+  let interval
+  let index = 0
 
   const addEntryBackground = () => {
     const entryBackground = document.querySelector('#entryBackground')
@@ -16,30 +16,35 @@ const viewStatusPageEvent = () => {
     }
   }
 
-  addEntryBackground()
+  const statusSlideShow = () => {
+    let width = 1
+    statusItems[index].classList.add('current')
+    addEntryBackground()
 
-  let interval = setInterval(() => {
-    if (width >= 100) {
-      const currentStatusItem = document.querySelector('.current')
-      currentStatusItem.classList.remove('current')
-      if (currentStatusItem.nextElementSibling) {
-        currentStatusItem.nextElementSibling.classList.add('current')
-        addEntryBackground()
+    interval = setInterval( () => {
+      if (width >= 100) {
+        statusItems[index].classList.remove('current')
+        index++
         width = 1
+        if (index === statusItems.length) {
+          index = 0
+          clearInterval(interval)
+          document.querySelector('.current-nav').style.display = 'block'
+          switchCurrentPage('statusPage')
+        }
+        statusItems[index].classList.add('current')
+        addEntryBackground()
       } else {
-        statusItems[0].classList.add('current')
-        document.querySelector('.current-nav').style.display = 'block'
-        switchCurrentPage('statusPage')
-        clearInterval(interval)
+        width++
+        for (let index = 0; index < bars.length; index++) {
+          const bar = bars[index]
+          bar.style.width = width + '%'
+        }
       }
-    } else {
-      width++
-      for (let index = 0; index < bars.length; index++) {
-        const bar = bars[index]
-        bar.style.width = width + '%'
-      }
-    }
-  }, 30)
+    }, 30)
+  }
+
+  statusSlideShow()
 
   document.querySelector('.previous-button').addEventListener('click', () => {
     document.querySelector('.current-nav').style.display = 'block'
@@ -53,29 +58,28 @@ const viewStatusPageEvent = () => {
     clearInterval(interval)
   })
 
-  document.querySelector('#previousButton').addEventListener('click', () => {
+  document.querySelector('#nextButton').addEventListener('click', () => {
     clearInterval(interval)
-    const currentStatusItem = document.querySelector('.current')
-    currentStatusItem.classList.remove('current')
-    if (currentStatusItem.previousElementSibling) {
-      currentStatusItem.previousElementSibling.classList.add('current')
-      addEntryBackground()
-    } else {
-      statusItems[statusItems.length - 1].classList.add('current')
+    statusItems[index].classList.remove('current')
+    index++
+    if (index === statusItems.length) {
+      index = 0
       document.querySelector('.current-nav').style.display = 'block'
       switchCurrentPage('statusPage')
     }
+
+    statusItems[index].classList.add('current')
+    addEntryBackground()
   })
 
-  document.querySelector('#nextButton').addEventListener('click', () => {
+  document.querySelector('#previousButton').addEventListener('click', () => {
     clearInterval(interval)
-    const currentStatusItem = document.querySelector('.current')
-    currentStatusItem.classList.remove('current')
-    if (currentStatusItem.nextElementSibling) {
-      currentStatusItem.nextElementSibling.classList.add('current')
-      addEntryBackground()
-    } else {
-      statusItems[0].classList.add('current')
+    statusItems[index].classList.remove('current')
+    index++
+    statusItems[statusItems.length - index].classList.add('current')
+    addEntryBackground()
+    if (index === statusItems.length) {
+      index = 0
       document.querySelector('.current-nav').style.display = 'block'
       switchCurrentPage('statusPage')
     }
