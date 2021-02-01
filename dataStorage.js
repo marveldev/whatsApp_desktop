@@ -7,7 +7,6 @@ request.onsuccess = () => {
 
 request.onupgradeneeded = () => {
   const database = request.result
-  // database.createObjectStore('chatPageBackground', { autoIncrement: true })
   database.createObjectStore('chatData', { keyPath: 'itemId' })
   database.createObjectStore('statusData', { keyPath: 'itemId' })
 }
@@ -60,14 +59,7 @@ const deleteEntry = (storeName, itemId) => {
   const database = request.result
   const transaction = database.transaction([storeName], 'readwrite')
   const store = transaction.objectStore(storeName)
-  if (typeof itemId === 'string') {
-    store.delete(itemId)
-  } else {
-    for (let index = 0; index < itemId.length; index++) {
-      const singleItemId = itemId[index]
-      store.delete(singleItemId)
-    }
-  }
+  store.delete(itemId)
 }
 
 export { request, addEntryToDb, getEntryFromDb, clearAllEntries, deleteEntry }
