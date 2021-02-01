@@ -3,10 +3,10 @@ import { getEntryFromDb } from "../../dataStorage.js"
 const StatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
   const statusPhotoItems = statusData.map(statusPhotoItem => {
-    const { photoSource } = statusPhotoItem
+    const { itemId, photoSource } = statusPhotoItem
     if (photoSource) {
       return `
-        <div class="status-entry-item">
+        <div id="${itemId}" class="status-entry-item">
           <button class="delete-entry-button"><i class="fa fa-trash"></i></button>
           <img src="${photoSource}" class="status-entry image" alt="photo">
           <small>today</small>
@@ -16,10 +16,10 @@ const StatusPage = async () => {
   })
 
   const statusTextItems = statusData.map(statusTextItem => {
-    const { textValue, entryBackgroundColor } = statusTextItem
+    const { itemId, textValue, entryBackgroundColor } = statusTextItem
     if (textValue.length >= 1) {
       return `
-        <div class="status-entry-item">
+        <div id="${itemId}" class="status-entry-item">
           <button class="delete-entry-button"><i class="fa fa-trash"></i></button>
           <div class="status-text" style="background-color:${entryBackgroundColor};">
             ${textValue}
@@ -41,6 +41,11 @@ const StatusPage = async () => {
           ${statusTextItems.join('') || ''}
           ${statusPhotoItems.join('') || ''}
         </div>
+      </div>
+      <div class="status-delete-modal">
+        <p>Delete this status update? It will also be deleted for everyone who received it.</p>
+        <button class="delete-item-button">DELETE</button>
+        <button class="close-modal-button">CANCEL</button>
       </div>
     </div>
   `
