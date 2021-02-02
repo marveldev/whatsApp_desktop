@@ -8,6 +8,14 @@
   text-align: center;
 }
 
+.default-page-photo {
+  width: 30em;
+  height: 25em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/default_page_photo.png");
+}
+
 #defaultPage {
   width: 50%;
   margin: auto;
