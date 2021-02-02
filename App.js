@@ -19,5 +19,6 @@ const App = () => {
 
 request.onsuccess = async () => {
   document.querySelector('.root').innerHTML = App()
+  document.body.className = localStorage.getItem('theme')
   switchCurrentPage('defaultPage')
 }
