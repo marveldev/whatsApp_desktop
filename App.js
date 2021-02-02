@@ -19,6 +19,5 @@ const App = () => {
 
 request.onsuccess = async () => {
   document.querySelector('.root').innerHTML = App()
-  // defaultNavEvents()
   switchCurrentPage('defaultPage')
 }
