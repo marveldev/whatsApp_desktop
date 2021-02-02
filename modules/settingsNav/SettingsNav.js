@@ -20,7 +20,7 @@ const SettingsNav = () => {
         </button>
         <button>
           <span><i class="material-icons">&#xe3ab;</i></span>
-          <p>Theme</p>
+          <p class="theme-button">Theme</p>
         </button>
         <button>
           <span><i class="material-icons">&#xe1bc;</i></span>
