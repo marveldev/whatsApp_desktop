@@ -1,0 +1,23 @@
+.dark span {
+  color: #9D9FA1;
+}
+
+.dark .default-page {
+  background-color: #262D31;
+}
+
+.dark #defaultPage {
+  color: #D9D9DB;
+  border-bottom: 0.1em solid #3C4247;
+}
+
+.dark .default-page-photo {
+  background-size: contain;
+  margin: 5em auto 2em;
+  font-size: 0.7em;
+  background-image: url("../../assets/default_page_darkphoto.png");
+}
+
+.dark .default-page > p {
+  color: #9D9FA1;
+}
