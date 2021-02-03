@@ -10,6 +10,7 @@ const DefaultNav = () => {
           <button class="top-nav-dropdown"><i class="material-icons">&#xe5d4;</i></button>
         </div>
         <div id="searchBoxContainer">
+          <i class="material-icons search-icon">&#xe8b6;</i>
           <textarea class="search-box" placeholder="Search or start a new chat"></textarea>
         </div>
       </div>
