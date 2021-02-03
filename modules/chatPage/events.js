@@ -1,5 +1,4 @@
 import { addEntryToDb, deleteEntry } from "../../dataStorage.js"
-import switchCurrentPage from "../helper.js"
 
 const deleteChatItem = () => {
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
