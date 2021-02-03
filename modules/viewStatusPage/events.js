@@ -6,20 +6,9 @@ const viewStatusPageEvent = () => {
   let interval
   let index = 0
 
-  const addEntryBackground = () => {
-    const entryBackground = document.querySelector('#entryBackground')
-    const entry = document.querySelector('.current').lastElementChild
-    if (entry.className === 'entry-text') {
-      entryBackground.style.backgroundColor = entry.style.backgroundColor
-    } else {
-      entryBackground.style.backgroundImage = `url(${entry.src})`
-    }
-  }
-
   const statusSlideShow = () => {
     let width = 1
     statusItems[index].classList.add('current')
-    addEntryBackground()
 
     interval = setInterval( () => {
       if (width >= 100) {
@@ -33,7 +22,6 @@ const viewStatusPageEvent = () => {
           switchCurrentPage('statusPage')
         }
         statusItems[index].classList.add('current')
-        addEntryBackground()
       } else {
         width++
         for (let index = 0; index < bars.length; index++) {
@@ -45,6 +33,13 @@ const viewStatusPageEvent = () => {
   }
 
   statusSlideShow()
+
+  for (let index = 0; index < statusItems.length; index++) {
+    const statusItem = statusItems[index]
+    statusItem.addEventListener('click', () => {
+      clearInterval(interval)
+    })
+  }
 
   document.querySelector('.previous-button').addEventListener('click', () => {
     document.querySelector('.current-nav').style.display = 'block'
@@ -67,9 +62,7 @@ const viewStatusPageEvent = () => {
       document.querySelector('.current-nav').style.display = 'block'
       switchCurrentPage('statusPage')
     }
-
     statusItems[index].classList.add('current')
-    addEntryBackground()
   })
 
   document.querySelector('#previousButton').addEventListener('click', () => {
@@ -77,7 +70,6 @@ const viewStatusPageEvent = () => {
     statusItems[index].classList.remove('current')
     index++
     statusItems[statusItems.length - index].classList.add('current')
-    addEntryBackground()
     if (index === statusItems.length) {
       index = 0
       document.querySelector('.current-nav').style.display = 'block'
