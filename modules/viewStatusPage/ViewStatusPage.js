@@ -2,6 +2,7 @@ import { getEntryFromDb } from "../../dataStorage.js"
 
 const viewStatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
+
   const statusEntryItems = statusData.map(statusEntryItem => {
     const { textValue, photoSource, entryBackgroundColor } = statusEntryItem
     if (textValue.length >= 1) {
