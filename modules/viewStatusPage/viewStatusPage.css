@@ -7,20 +7,6 @@
   background-color: #141414;
 }
 
-#entryBackground {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  border-radius: 0.5em;
-  filter: blur(0.1em);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .button-container i {
   color: #fff;
   font-size: 1.5em;
