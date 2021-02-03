@@ -21,3 +21,89 @@
 .dark .default-page > p {
   color: #9D9FA1;
 }
+
+.dark .default-nav {
+  background-color: #131C21;
+}
+
+.dark .top-nav {
+  background-color: #2A2F32;
+}
+
+.dark i {
+  color: #B1B3B5;
+}
+
+.dark .search-box {
+  background-color: #323739;
+}
+
+.dark .chat-settings-options p,
+.dark .status-info {
+  color: #fff;
+  border-bottom: 0.01em solid #30383D;
+}
+
+.dark .chat-person-list::-webkit-scrollbar-track {
+  background-color: #131C21;
+}
+
+.dark .chat-person-list::-webkit-scrollbar-thumb {
+  background: #323739;
+}
+
+.dark .chat-person:hover,
+.dark .chat-settings-options > button:hover {
+  background-color: #2D3134;
+}
+
+.dark .nav-dropdown-modal {
+  background-color: #2A2F32;
+  box-shadow: 0 0 1em 0.3em #00000085;
+}
+
+.dark .nav-dropdown-modal > button {
+  color: #fff;
+}
+
+.dark .nav-dropdown-modal > button:hover {
+  background-color: #131C21;
+}
+
+.dark .settings-nav {
+  background-color: #131C21;
+}
+
+.dark .settings-header {
+  background-color: #323739;
+}
+
+.dark .page-overlay {
+  background-color: #0a0f1293;
+}
+
+.dark .theme-container {
+  background-color: #3B4042;
+  color: #fff;
+}
+
+.dark .radio input:checked ~ .checkmark {
+  border: 2px solid #0075FF;
+}
+
+.dark .radio .checkmark:after {
+  background: #0075FF;
+}
+
+.dark .radio > .checkmark {
+  background: #fff;
+}
+
+.dark .close-theme-button {
+  color: #00AF9C;
+}
+
+.confirm-theme-button {
+  background-color: #00AF9C;
+  color: #000;
+}
