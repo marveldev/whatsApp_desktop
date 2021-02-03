@@ -40,7 +40,6 @@ const pusherMessage = (page) => {
         chatBoxValue: message
       }
       addEntryToDb('chatData', chatObject)
-      console.log('pusher success');
     })
   }
 
@@ -71,7 +70,7 @@ const pusherMessage = (page) => {
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
   const currentNav = document.querySelector('.current-nav')
-  pusherMessage(page)
+  // pusherMessage(page)
   switch (page) {
     case 'defaultNav':
       currentNav.innerHTML = DefaultNav()
@@ -91,6 +90,10 @@ const switchCurrentPage = async (page) => {
       currentNav.innerHTML = await StatusNav()
       statusNavEvent()
       statusPageEvent()
+      break;
+    case 'statusNav':
+      currentNav.innerHTML = await StatusNav()
+      statusNavEvent()
       break;
     case 'statusTextEntry':
       currentNav.innerHTML = statusTextEntry()
