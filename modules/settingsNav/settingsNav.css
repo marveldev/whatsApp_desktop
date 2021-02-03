@@ -4,6 +4,16 @@
   left: 0;
   height: 100%;
   width: 30%;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .settings-header {
