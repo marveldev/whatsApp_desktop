@@ -45,8 +45,7 @@ const statusNavEvent = () => {
     photoReader.readAsDataURL(statusFilePicker.files[0])
     photoReader.addEventListener('load', () => {
       addStatusFile(null, photoReader.result)
-      document.querySelector('.view-status').style.display = 'flex'
-      document.querySelector('.add-status').style.display = 'none'
+      switchCurrentPage('statusNav')
     })
   })
 
