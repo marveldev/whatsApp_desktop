@@ -57,3 +57,19 @@
 #addPhotoStatus {
   display: none;
 }
+
+.recent-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  height: 4em;
+  width: 5em;
+  word-break: break-all;
+  overflow: hidden;
+  max-width: 4em;
+  margin: 0.4em 1em 0 0;
+  background-size: cover;
+  background-position: center;
+}
