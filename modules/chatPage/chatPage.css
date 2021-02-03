@@ -204,14 +204,14 @@
   background-color: #fff;
   height: auto;
   z-index: 1;
-  width: fit-content;
+  width: 11em;
   border-radius: 0.5em;
-  padding: 0.5em 1.2em;
+  padding: 0.5em 0;
 }
 
 .dropdown-modal > button {
   display: block;
-  padding: 1em 0.5em;
+  padding: 1em;
   width: 100%;
   text-align: left;
   margin: 0.2em 0;
