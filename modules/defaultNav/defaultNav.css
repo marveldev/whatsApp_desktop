@@ -39,6 +39,7 @@
 .top-nav {
   position: fixed;
   width: 30%;
+  height: 25%;
   z-index: 1;
   background-color: #EDEDED;
 }
@@ -71,7 +72,7 @@ button {
 
 .image {
   height: 4em;
-  width: 5em;
+  width: 4.8em;
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
@@ -85,7 +86,7 @@ button {
 .search-box {
   width: 80%;
   border: unset;
-  padding: 1em 0 0 2.5em;
+  padding: 1em 0 0 4em;
   border-radius: 1.5em;
   outline: none;
   resize: none;
@@ -94,9 +95,9 @@ button {
 
 .chat-person-list {
   position: relative;
-  top: 22%;
+  top: 25%;
   height: auto;
-  max-height: 31em;
+  max-height: 30em;
   overflow-y: auto;
 }
 
@@ -158,4 +159,11 @@ button {
   width: 100%;
   text-align: left;
   font-size: 1em;
+}
+
+.search-icon {
+  position: relative;
+  top: 2.4em;
+  left: 1.5em;
+  font-size: 1.3em;
 }
