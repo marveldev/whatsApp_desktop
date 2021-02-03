@@ -36,6 +36,7 @@
 
 .dark .search-box {
   background-color: #323739;
+  color: #fff;
 }
 
 .dark .chat-settings-options p,
@@ -62,14 +63,12 @@
   box-shadow: 0 0 1em 0.3em #00000085;
 }
 
-.dark .nav-dropdown-modal > button {
+.dark .nav-dropdown-modal > button,
+.dark .message-value {
   color: #fff;
 }
 
-.dark .nav-dropdown-modal > button:hover {
-  background-color: #131C21;
-}
-
+.dark .nav-dropdown-modal > button:hover,
 .dark .settings-nav {
   background-color: #131C21;
 }
@@ -82,8 +81,10 @@
   background-color: #0a0f1293;
 }
 
-.dark .theme-container {
+.dark .theme-container,
+.dark .delete-modal {
   background-color: #3B4042;
+  box-shadow: 0 0 1em 0.3em #000;
   color: #fff;
 }
 
@@ -99,11 +100,67 @@
   background: #fff;
 }
 
-.dark .close-theme-button {
+.dark .close-theme-button,
+.dark .cancel-button {
   color: #00AF9C;
 }
 
-.confirm-theme-button {
+.dark .confirm-theme-button,
+.dark .delete-button {
   background-color: #00AF9C;
   color: #000;
+}
+
+.dark .chat-page {
+  color: #fff;
+  background-image: url('../../assets/chat_dark_background_image.png');
+}
+
+.dark .chat-top-nav {
+  background-color: #2A2F32;
+  border-left: 0.1em solid #3F4448;
+}
+
+.dark #chatInputContent,
+.dark .person-button-container {
+  background-color: #2A2F32;
+}
+
+.dark .chat-box,
+.dark .person-button-container > button {
+  background-color: #323739;
+  color: #fff;
+}
+
+.dark .chat-text {
+  background-color: #056162;
+}
+
+.dark .arrow-right {
+  border-left: 0.8em solid #056162;
+}
+
+.dark .chat-item-dropdown {
+  background-color: #056162;
+}
+
+.dark #person-two .chat-item-dropdown,
+.dark #person-two {
+  background-color: #262D31;
+}
+
+.dark .arrow-left {
+  border-right: 0.8em solid #262D31;
+}
+
+.dark .dropdown-modal {
+  background-color: #2A2F32;
+}
+
+.dark .dropdown-modal > button {
+  color: #fff;
+}
+
+.dark .dropdown-modal > button:hover {
+  background-color: #131C21;
 }
