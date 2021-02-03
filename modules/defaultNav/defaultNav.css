@@ -6,6 +6,17 @@
   height: 100%;
 }
 
+#topPageOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #00000000;
+}
+
 .page-overlay {
   display: none;
   position: fixed;
@@ -129,11 +140,13 @@ button {
 
 .nav-dropdown-modal {
   display: none;
-  position: fixed;
-  left: 15%;
+  position: absolute;
+  right: 10%;
+  top: 3em;
   background-color: #fff;
   height: auto;
   width: 12em;
+  z-index: 2;
   border-radius: 0.2em;
   padding: 1em 0;
   box-shadow: 0 0 1em 0.3em #A9A9A8;
