@@ -180,3 +180,17 @@
 .dark .icon i {
   color: #fff;
 }
+
+.dark .status-delete-modal {
+  background-color: #3B4042;
+  box-shadow: 0 0 1em 0.3em #000;
+  color: #fff;
+}
+
+.dark .status-delete-modal > button {
+  color: #00AF9C;
+}
+
+.dark .delete-entry-button > i {
+  color: #fff;
+}
