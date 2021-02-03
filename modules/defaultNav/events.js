@@ -11,6 +11,7 @@ const defaultNavEvents = () => {
 
   document.querySelector('.top-nav-dropdown').addEventListener('click', () => {
     document.querySelector('.nav-dropdown-modal').style.display = 'block'
+    document.querySelector('#topPageOverlay').style.display = 'block'
   })
 
   document.querySelector('.settings-button').addEventListener('click', () => {
@@ -20,6 +21,11 @@ const defaultNavEvents = () => {
 
   document.querySelector('.status-button').addEventListener('click', () => {
     switchCurrentPage('statusPage')
+  })
+
+  document.querySelector('#topPageOverlay').addEventListener('click', () => {
+    document.querySelector('.nav-dropdown-modal').style.display = 'none'
+    document.querySelector('#topPageOverlay').style.display = 'none'
   })
 }
 
