@@ -2,6 +2,9 @@ import { getEntryFromDb } from "../../dataStorage.js"
 
 const StatusNav = async () => {
   const statusData = await getEntryFromDb('statusData')
+  const photoSource = statusData[statusData.length - 1].photoSource
+  const textValue = statusData[statusData.length - 1].textValue
+  const entryBackgroundColor = statusData[statusData.length - 1].entryBackgroundColor
 
   return `
     <div class="status-nav">
@@ -17,8 +20,9 @@ const StatusNav = async () => {
         </div>
       </button>
       <button class="view-status photo-button" style="display:${statusData.length >= 1 ? 'flex' : 'none'};">
-        <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-          class="image" alt="photo">
+        <div class="recent-entry" style="background-color:${entryBackgroundColor};background-image:url(${photoSource});">
+          ${textValue}
+        </div>
         <div class="status-info">
           <strong>My status</strong>
           <p>Tap to view status update</p>
