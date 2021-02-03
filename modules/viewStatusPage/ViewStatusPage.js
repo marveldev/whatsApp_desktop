@@ -2,20 +2,8 @@ import { getEntryFromDb } from "../../dataStorage.js"
 
 const viewStatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
-  const statusPhotoItems = statusData.map(statusPhotoItem => {
-    const { photoSource } = statusPhotoItem
-    if (photoSource) {
-      return `
-        <div class="status-item">
-          <div class="progress-bar"><div class="bar"></div></div>
-          <img src="${photoSource}" class="entry-photo" alt="photo">
-        </div>
-      `
-    }
-  })
-
-  const statusTextItems = statusData.map(statusTextItem => {
-    const { textValue, entryBackgroundColor } = statusTextItem
+  const statusEntryItems = statusData.map(statusEntryItem => {
+    const { textValue, photoSource, entryBackgroundColor } = statusEntryItem
     if (textValue.length >= 1) {
       return `
         <div class="status-item">
@@ -23,6 +11,13 @@ const viewStatusPage = async () => {
           <div class="entry-text" style="background-color:${entryBackgroundColor};">
             ${textValue}
           </div>
+        </div>
+      `
+    } else {
+      return `
+        <div class="status-item">
+          <div class="progress-bar"><div class="bar"></div></div>
+          <img src="${photoSource}" class="entry-photo" alt="photo">
         </div>
       `
     }
@@ -37,8 +32,7 @@ const viewStatusPage = async () => {
         <button id="nextButton"><i class="material-icons">&#xe315;</i></button>
       </div>
       <div class="entry-container">
-        ${statusTextItems.join('')}
-        ${statusPhotoItems.join('')}
+        ${statusEntryItems.join('')}
       </div>
     </div>
   `
