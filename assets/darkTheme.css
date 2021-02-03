@@ -164,3 +164,19 @@
 .dark .dropdown-modal > button:hover {
   background-color: #131C21;
 }
+
+.dark .photo-button .status-info {
+  border: none;
+}
+
+.dark #addPhotoStatusButton {
+  background-color: #131C21;
+}
+
+.dark .icon {
+  background-color: #131C21;
+}
+
+.dark .icon i {
+  color: #fff;
+}
