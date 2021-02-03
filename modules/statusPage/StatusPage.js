@@ -1,9 +1,26 @@
-import { getEntryFromDb } from "../../dataStorage.js"
+import { deleteEntry, getEntryFromDb } from "../../dataStorage.js"
 
 const StatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
+  statusData.map(statusItem => {
+    const { timeOfStatusUpload } = statusItem
+    const timeDifference = (new Date().getTime() - timeOfStatusUpload.getTime())
+    const statusDuration = Math.floor(timeDifference/1000/60/60)
+    if (statusDuration >= '24') {
+      deleteEntry('statusData', statusItem.itemId)
+    }
+  })
+
   const statusEntryItems = statusData.map(statusEntryItem => {
-    const { itemId, textValue, photoSource, entryBackgroundColor } = statusEntryItem
+    const {
+      itemId, textValue, photoSource, entryBackgroundColor, timeOfStatusUpload
+    } = statusEntryItem
+    const day = timeOfStatusUpload.getDay()
+    const hour = timeOfStatusUpload.getHours()
+    const minute = timeOfStatusUpload.getMinutes()
+    const entryTime = new Date().getDay() > day ?
+    `yesterday at ${hour + ":" + minute}` : `today at ${hour + ":" + minute}`
+
     if (textValue.length >= 1) {
       return `
         <div id="${itemId}" class="status-entry-item">
@@ -11,7 +28,7 @@ const StatusPage = async () => {
           <div class="status-text" style="background-color:${entryBackgroundColor};">
             ${textValue}
           </div>
-          <small>today</small>
+          <small>${entryTime}</small>
         </div>
       `
     } else {
@@ -19,7 +36,7 @@ const StatusPage = async () => {
         <div id="${itemId}" class="status-entry-item">
           <button class="delete-entry-button"><i class="fa fa-trash"></i></button>
           <img src="${photoSource}" class="status-entry image" alt="photo">
-          <small>today</small>
+          <small>${entryTime}</small>
         </div>
       `
     }
