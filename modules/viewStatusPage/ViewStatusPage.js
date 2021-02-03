@@ -30,7 +30,6 @@ const viewStatusPage = async () => {
 
   return `
     <div class="view-status-page">
-      <div id="entryBackground"></div>
       <div class="button-container">
         <button class="previous-button"><i class="material-icons">&#xe5c4;</i></button>
         <button class="close-button">X</button>
