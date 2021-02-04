@@ -11,13 +11,13 @@
 }
 
 .chat-nav-dropdown {
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 .chat-top-nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 70%;
   display: flex;
   background-color: #EDEDED;
   border-left: 0.1em solid #DADADA;
@@ -36,7 +36,7 @@
 
 #chatInputContent > div {
   display: grid;
-  grid-template-columns: 0.1fr 1fr 0.6fr;
+  grid-template-columns: 0.15fr 1fr 0.6fr;
 }
 
 .chat-box {
@@ -46,7 +46,7 @@
   border-radius: 1.5em;
   outline: none;
   resize: none;
-  margin: 1em;
+  margin: 1em 0;
   overflow-x: hidden;
   max-height: 8em;
   line-height: 1.2em;
@@ -60,11 +60,18 @@
 }
 
 .add-buttons {
-  margin: auto 0;
+  margin: auto 1em;
 }
 
 .send-button {
   display: none;
+  position: relative;
+  right: 2em;
+}
+
+.record-button {
+  position: relative;
+  right: 2em;
 }
 
 .person-button-container {
@@ -113,8 +120,8 @@
 .chat-text {
   background-color: #E1FFC7;
   border-radius: 0.3em;
-  padding: 0.2em 1em;
-  max-width: 18em;
+  padding: 0.5em 1em 0.2em 1em;
+  max-width: 25em;
   word-wrap: break-word;
   height: auto;
 }
@@ -124,8 +131,6 @@
 }
 
 .chat-time {
-  position: relative;
-  left: 2em;
   color: #9aad88;
   font-size: 0.7em;
 }
@@ -134,9 +139,16 @@
   background-color: #fff;
 }
 
+.chat-text > div {
+  position: relative;
+  left: 2em;
+  float: right;
+}
+
 .chat-item-dropdown {
   visibility: hidden;
   position: relative;
+  right: 2em;
   background-color: #E1FFC7;
   vertical-align: middle;
   padding: 0;
@@ -207,6 +219,12 @@
   width: 11em;
   border-radius: 0.5em;
   padding: 0.5em 0;
+  animation: pop-in 0.5s ease-in-out;
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .dropdown-modal > button {
