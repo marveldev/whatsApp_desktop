@@ -29,14 +29,13 @@
 }
 
 .icon {
-  position: fixed;
+  position: absolute;
   bottom: 3em;
   color: #fff;
   width: 3em;
   height: 3em;
   border-radius: 1.5em;
   font-size: 1.2em;
-  background-color: #0f5f58;
   box-shadow: 0 0.2em 0.2em 0em #00000060;
 }
 
@@ -59,7 +58,7 @@
 
 #sendTextButton {
   display: none;
-  left: 16em;
+  right: 2em;
 }
 
 #sendTextButton > i {
