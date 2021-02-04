@@ -47,18 +47,20 @@ const chatItemEvents = () => {
   for (let index = 0; index < chatTexts.length; index++) {
     const chatText = chatTexts[index]
     chatText.addEventListener('mouseover', () => {
-      chatText.lastElementChild.style.visibility = 'visible'
+      const element = chatText.title
+      document.querySelector(`#${element}`).style.visibility = 'visible'
     })
 
     chatText.addEventListener('mouseout', () => {
-      chatText.lastElementChild.style.visibility = 'hidden'
+      const element = chatText.title
+      document.querySelector(`#${element}`).style.visibility = 'hidden'
     })
   }
 
   for (let index = 0; index < chatItemDropdowns.length; index++) {
-    const chatItemDropdown = chatItemDropdowns[index];
+    const chatItemDropdown = chatItemDropdowns[index]
     chatItemDropdown.addEventListener('click', (event) => {
-      const person = chatItemDropdown.parentElement.id
+      const person = chatItemDropdown.parentElement.parentElement.id
       const horizontalPosition = event.clientX
       const verticalPosition = event.clientY
       document.querySelector('.delete-button').title = chatItemDropdown.id
@@ -90,10 +92,12 @@ const addChatItemToDom = (person, message) => {
     <div class="${itemId}">
       <div class="${person === 'person-one' ? 'arrow-right' : 'arrow-left'}"></div>
       <div class="${person} chat-item">
-        <div id="${person}" class="chat-text">
+        <div id="${person}" class="chat-text" title="${itemId}">
           <span class="message-value">${chatBoxValue}</span>
-          <sub class="chat-time">${chatTime}</sub>
-          <button id="${itemId}" class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
+          <div>
+            <sub class="chat-time">${chatTime}</sub>
+            <button id="${itemId}" class="chat-item-dropdown"><i class="material-icons">&#xe313;</i><sup>
+          </div>
         </div>
       </div>
     </div>
