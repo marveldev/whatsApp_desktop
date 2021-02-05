@@ -28,10 +28,9 @@ request.onsuccess = async () => {
 
   const channel = pusher.subscribe('chat')
   channel.bind('send-message', data => {
+    const { person, message } = data
     const itemId = 'id' + Date.parse(new Date()).toString()
     const chatTime = new Date().toTimeString().substr(0, 5)
-    const { person, message } = data
-
     const chatObject = {
       itemId: itemId,
       person: person,
