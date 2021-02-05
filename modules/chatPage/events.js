@@ -128,17 +128,17 @@ const chatPageEvents = () => {
   const recordButton = document.querySelector('.record-button')
   const personOneChatButton = document.querySelector('.person-one-button')
   const personTwoChatButton = document.querySelector('.person-two-button')
+  // const pusher = new Pusher('2de3c2f998e996603b10', {
+  //   cluster: 'eu'
+  // })
 
-  const pusher = new Pusher('2de3c2f998e996603b10', {
-    cluster: 'eu'
-  })
-
-  const channel = pusher.subscribe('chat')
-  channel.bind('send-message', data => {
-    const { person, message } = data
-    addChatItemToDom(person, message)
-    console.log('pusher success');
-  })
+  // if (document.querySelector('.current-page').innerHTML = ChatPage()) {
+  //   const channel = pusher.subscribe('chat')
+  //   channel.bind('send-message', data => {
+  //     const { person, message } = data
+  //     addChatItemToDom(person, message)
+  //   })
+  // }
 
   chatBox.addEventListener('input', () => {
     chatBox.style.height = "1px"
