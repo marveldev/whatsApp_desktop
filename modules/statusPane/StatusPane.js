@@ -1,13 +1,13 @@
 import { getEntryFromDb } from "../../dataStorage.js"
 
-const StatusNav = async () => {
+const statusPane = async () => {
   const statusData = await getEntryFromDb('statusData')
   const photoSource = statusData[0] ? statusData[statusData.length - 1].photoSource : ''
   const textValue = statusData[0] ? statusData[statusData.length - 1].textValue : ''
   const entryBackgroundColor = statusData[0] ? statusData[statusData.length - 1].entryBackgroundColor : ''
 
   return `
-    <div class="status-nav">
+    <div class="status-pane">
       <input type="file" id="addPhotoStatus">
       <button class="add-status photo-button" style="display:${statusData.length >= 1 ? 'none' : 'flex'};">
         <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
@@ -40,4 +40,4 @@ const StatusNav = async () => {
   `
 }
 
-export default StatusNav
+export default statusPane

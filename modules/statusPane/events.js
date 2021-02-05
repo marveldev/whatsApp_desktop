@@ -38,14 +38,14 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
   addEntryToDb('statusData', statusObject)
 }
 
-const statusNavEvent = () => {
+const statusPaneEvent = () => {
   const statusFilePicker = document.querySelector('#addPhotoStatus')
   statusFilePicker.addEventListener('change', () => {
     const photoReader = new FileReader()
     photoReader.readAsDataURL(statusFilePicker.files[0])
     photoReader.addEventListener('load', () => {
       addStatusFile(null, photoReader.result)
-      switchCurrentPage('statusNav')
+      switchCurrentPage('statusPane')
     })
   })
 
@@ -61,5 +61,5 @@ const statusNavEvent = () => {
   })
 }
 
-export default statusNavEvent
+export default statusPaneEvent
 export { addStatusFile }

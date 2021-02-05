@@ -6,9 +6,9 @@ import contactPaneEvents from "./contactPane/events.js"
 import settingsPane from "./settingsPane/settingsPane.js"
 import settingsPaneEvents from "./settingsPane/events.js"
 import StatusPage from "./statusPage/statusPage.js"
-import StatusNav from "./statusNav/StatusNav.js"
+import statusPane from "./statusPane/statusPane.js"
 import statusPageEvent from "./statusPage/events.js"
-import statusNavEvent, { addStatusFile } from "./statusNav/events.js"
+import statusPaneEvent, { addStatusFile } from "./statusPane/events.js"
 import statusTextEntry from "./statusTextEntry/statusTextEntry.js"
 import statusTextEntryEvent from "./statusTextEntry/events.js"
 import viewStatusPage from "./viewStatusPage/ViewStatusPage.js"
@@ -87,13 +87,13 @@ const switchCurrentPage = async (page) => {
       break;
     case 'statusPage':
       currentPage.innerHTML = await StatusPage()
-      currentNav.innerHTML = await StatusNav()
-      statusNavEvent()
+      currentNav.innerHTML = await statusPane()
+      statusPaneEvent()
       statusPageEvent()
       break;
-    case 'statusNav':
-      currentNav.innerHTML = await StatusNav()
-      statusNavEvent()
+    case 'statusPane':
+      currentNav.innerHTML = await statusPane()
+      statusPaneEvent()
       break;
     case 'statusTextEntry':
       currentNav.innerHTML = statusTextEntry()
