@@ -2,9 +2,9 @@ import { getEntryFromDb } from "../../dataStorage.js"
 
 const StatusNav = async () => {
   const statusData = await getEntryFromDb('statusData')
-  const photoSource = statusData[statusData.length - 1].photoSource
-  const textValue = statusData[statusData.length - 1].textValue
-  const entryBackgroundColor = statusData[statusData.length - 1].entryBackgroundColor
+  const photoSource = statusData[0] ? statusData[statusData.length - 1].photoSource : ''
+  const textValue = statusData[0] ? statusData[statusData.length - 1].textValue : ''
+  const entryBackgroundColor = statusData[0] ? statusData[statusData.length - 1].entryBackgroundColor : ''
 
   return `
     <div class="status-nav">
