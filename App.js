@@ -1,6 +1,6 @@
 import { request } from "./dataStorage.js"
-import DefaultNav from "./modules/defaultNav/defaultNav.js"
-import defaultNavEvents from "./modules/defaultNav/events.js"
+import contactPane from "./modules/contactPane/contactPane.js"
+import contactPaneEvents from "./modules/contactPane/events.js"
 import DefaultPage from "./modules/defaultPage/DefaultPage.js"
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <section class="page-overlay"></section>
     <section class="page-container">
       <div class="current-nav">
-        ${DefaultNav()}
+        ${contactPane()}
       </div>
       <div class="current-page">
         ${DefaultPage()}
@@ -20,5 +20,5 @@ const App = () => {
 request.onsuccess = async () => {
   document.querySelector('.root').innerHTML = App()
   document.body.className = localStorage.getItem('theme')
-  defaultNavEvents()
+  contactPaneEvents()
 }
