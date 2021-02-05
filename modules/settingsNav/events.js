@@ -9,7 +9,7 @@ const settingsNavEvents = () => {
   theme ? checkedRadioButton.setAttribute('checked', '') : ''
 
   document.querySelector('.back-button').addEventListener('click', () => {
-    switchCurrentPage('defaultNav')
+    switchCurrentPage('contactPane')
   })
 
   document.querySelector('.theme-button').addEventListener('click', () => {

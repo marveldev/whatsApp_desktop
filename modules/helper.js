@@ -1,8 +1,8 @@
 import DefaultPage from "./defaultPage/DefaultPage.js"
 import ChatPage from "./chatPage/ChatPage.js"
 import chatPageEvents, { addChatItemToDom, chatItemEvents } from "./chatPage/events.js"
-import DefaultNav from "./defaultNav/DefaultNav.js"
-import defaultNavEvents from "./defaultNav/events.js"
+import contactPane from "./contactPane/contactPane.js"
+import contactPaneEvents from "./contactPane/events.js"
 import SettingsNav from "./settingsNav/settingsNav.js"
 import settingsNavEvents from "./settingsNav/events.js"
 import StatusPage from "./statusPage/statusPage.js"
@@ -72,9 +72,9 @@ const switchCurrentPage = async (page) => {
   const currentNav = document.querySelector('.current-nav')
   // pusherMessage(page)
   switch (page) {
-    case 'defaultNav':
-      currentNav.innerHTML = DefaultNav()
-      defaultNavEvents()
+    case 'contactPane':
+      currentNav.innerHTML = contactPane()
+      contactPaneEvents()
       break;
     case 'settingsNav':
       currentNav.innerHTML = SettingsNav()
@@ -104,9 +104,9 @@ const switchCurrentPage = async (page) => {
       viewStatusPageEvent()
       break;
     case 'defaultPage':
-      currentNav.innerHTML = DefaultNav()
+      currentNav.innerHTML = contactPane()
       currentPage.innerHTML = DefaultPage()
-      defaultNavEvents()
+      contactPaneEvents()
       break;
     default:
       currentPage.innerHTML = DefaultPage()

@@ -1,7 +1,7 @@
 .page-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  font-family: "Roboto", sans-serif, Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
 }
@@ -28,12 +28,12 @@
   background-color: #fbfaf9b4;
 }
 
-.default-nav {
+.contact-pane {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 30%;
+  width: 100%;
 }
 
 .top-nav {
@@ -72,7 +72,7 @@ button {
 
 .image {
   height: 4em;
-  width: 4.8em;
+  min-width: 4em;
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
@@ -111,7 +111,7 @@ button {
   background-color: #EBEBEB;
 }
 
-.status-info {
+.more-info {
   text-align: left;
   width: 100%;
   line-height: 1.5em;
@@ -119,11 +119,11 @@ button {
   border-bottom: 0.01em solid #95959555;
 }
 
-.status-info p {
+.more-info p {
   margin: 0;
 }
 
-.status-info strong {
+.more-info strong {
   font-size: 1.2em;
 }
 

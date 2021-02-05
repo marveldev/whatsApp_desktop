@@ -22,7 +22,7 @@
   color: #9D9FA1;
 }
 
-.dark .default-nav {
+.dark .contact-pane {
   background-color: #131C21;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .dark .chat-settings-options p,
-.dark .status-info {
+.dark .more-info {
   color: #fff;
   border-bottom: 0.01em solid #30383D;
 }
@@ -165,7 +165,7 @@
   background-color: #131C21;
 }
 
-.dark .photo-button .status-info {
+.dark .photo-button .more-info {
   border: none;
 }
 

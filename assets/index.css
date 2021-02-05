@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-@import '../modules/defaultNav/defaultNav.css';
+@import '../modules/contactPane/contactPane.css';
 @import '../modules/chatPage/chatPage.css';
 @import '../modules/defaultPage/defaultPage.css';
 @import '../modules/settingsNav/settingsNav.css';

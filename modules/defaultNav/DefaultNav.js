@@ -1,6 +1,6 @@
-const DefaultNav = () => {
+const contactPane = () => {
   return `
-    <div class="default-nav">
+    <div class="contact-pane">
       <div id="topPageOverlay"></div>
       <div class="top-nav">
         <div class="top-nav-buttons">
@@ -27,7 +27,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -37,7 +37,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -47,7 +47,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -57,7 +57,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -67,7 +67,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -77,7 +77,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -87,7 +87,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -97,7 +97,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -107,7 +107,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -117,7 +117,7 @@ const DefaultNav = () => {
         <button class="chat-person">
           <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
             class="image" alt="photo">
-          <div class="status-info">
+          <div class="more-info">
             <strong>Jack Williams</strong>
             <div>
               <p>Hello</p>
@@ -129,4 +129,4 @@ const DefaultNav = () => {
   `
 }
 
-export default DefaultNav
+export default contactPane

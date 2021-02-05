@@ -12,7 +12,7 @@ const StatusNav = async () => {
       <button class="add-status photo-button" style="display:${statusData.length >= 1 ? 'none' : 'flex'};">
         <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
           class="image" alt="photo">
-        <div class="status-info">
+        <div class="more-info">
           <label for="addPhotoStatus">
             <strong>My status</strong>
             <p>Tap to add status update</p>
@@ -23,7 +23,7 @@ const StatusNav = async () => {
         <div class="recent-entry" style="background-color:${entryBackgroundColor};background-image:url(${photoSource});">
           ${textValue}
         </div>
-        <div class="status-info">
+        <div class="more-info">
           <strong>My status</strong>
           <p>Tap to view status update</p>
         </div>
