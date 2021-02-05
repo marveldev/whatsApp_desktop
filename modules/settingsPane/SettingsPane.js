@@ -1,6 +1,6 @@
-const SettingsNav = () => {
+const settingsPane = () => {
   return `
-    <div class="settings-nav">
+    <div class="settings-pane">
       <div class="settings-header">
         <button type="button" class="back-button"><i class="material-icons">&#xe5c4;</i></button>
         <strong>Settings</strong>
@@ -65,4 +65,4 @@ const SettingsNav = () => {
   `
 }
 
-export default SettingsNav
+export default settingsPane

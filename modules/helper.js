@@ -3,8 +3,8 @@ import ChatPage from "./chatPage/ChatPage.js"
 import chatPageEvents, { addChatItemToDom, chatItemEvents } from "./chatPage/events.js"
 import contactPane from "./contactPane/contactPane.js"
 import contactPaneEvents from "./contactPane/events.js"
-import SettingsNav from "./settingsNav/settingsNav.js"
-import settingsNavEvents from "./settingsNav/events.js"
+import settingsPane from "./settingsPane/settingsPane.js"
+import settingsPaneEvents from "./settingsPane/events.js"
 import StatusPage from "./statusPage/statusPage.js"
 import StatusNav from "./statusNav/StatusNav.js"
 import statusPageEvent from "./statusPage/events.js"
@@ -76,9 +76,9 @@ const switchCurrentPage = async (page) => {
       currentNav.innerHTML = contactPane()
       contactPaneEvents()
       break;
-    case 'settingsNav':
-      currentNav.innerHTML = SettingsNav()
-      settingsNavEvents()
+    case 'settingsPane':
+      currentNav.innerHTML = settingsPane()
+      settingsPaneEvents()
       break;
     case 'chatPage':
       currentPage.innerHTML = await ChatPage()

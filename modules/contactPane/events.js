@@ -16,7 +16,7 @@ const contactPaneEvents = () => {
 
   document.querySelector('.settings-button').addEventListener('click', () => {
     document.querySelector('.nav-dropdown-modal').style.display = 'none'
-    switchCurrentPage('settingsNav')
+    switchCurrentPage('settingsPane')
   })
 
   document.querySelector('.status-button').addEventListener('click', () => {
