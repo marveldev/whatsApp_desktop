@@ -50,7 +50,7 @@ const StatusPage = async () => {
           ${statusData.length == 0 ? "You've not added any status yet": 'View your update'}
         </p>
         <div class="status-entry-container">
-          ${statusEntryItems.join('')}
+          ${statusEntryItems.join('') || ''}
         </div>
       </div>
       <div class="status-delete-modal">
