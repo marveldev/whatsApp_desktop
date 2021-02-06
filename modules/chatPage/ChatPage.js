@@ -43,10 +43,10 @@ const ChatPage = async () => {
     <div class="chat-page">
       <div id="chatPageOverlay"></div>
       <div class="chat-top-nav">
-        <img src="https://images.pexels.com/photos/4119310/pexels-photo-4119310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+        <img src="https://images.pexels.com/photos/6306487/pexels-photo-6306487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
           class="profile-photo" alt="photo">
         <div class="person-info">
-          <strong>Jack Williams</strong>
+          <strong>Liam Benjamin</strong>
           <p>online</p>
         </div>
         <button type="button" class="chat-nav-dropdown">
