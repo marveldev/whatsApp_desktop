@@ -1,5 +1,5 @@
 import { addEntryToDb, request } from "./dataStorage.js"
-import contactPane from "./modules/contactPane/contactPane.js"
+import ContactPane from "./modules/contactPane/ContactPane.js"
 import contactPaneEvents from "./modules/contactPane/events.js"
 import DefaultPage from "./modules/defaultPage/DefaultPage.js"
 
@@ -8,7 +8,7 @@ const App = () => {
     <section class="page-overlay"></section>
     <section class="page-container">
       <div class="current-nav">
-        ${contactPane()}
+        ${ContactPane()}
       </div>
       <div class="current-page">
         ${DefaultPage()}

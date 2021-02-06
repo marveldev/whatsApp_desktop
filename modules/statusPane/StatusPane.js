@@ -1,6 +1,6 @@
 import { getEntryFromDb } from "../../dataStorage.js"
 
-const statusPane = async () => {
+const StatusPane = async () => {
   const statusData = await getEntryFromDb('statusData')
   const photoSource = statusData[0] ? statusData[statusData.length - 1].photoSource : ''
   const textValue = statusData[0] ? statusData[statusData.length - 1].textValue : ''
@@ -40,4 +40,4 @@ const statusPane = async () => {
   `
 }
 
-export default statusPane
+export default StatusPane

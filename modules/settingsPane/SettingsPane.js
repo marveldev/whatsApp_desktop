@@ -1,4 +1,4 @@
-const settingsPane = () => {
+const SettingsPane = () => {
   return `
     <div class="settings-pane">
       <div class="settings-header">
@@ -65,4 +65,4 @@ const settingsPane = () => {
   `
 }
 
-export default settingsPane
+export default SettingsPane

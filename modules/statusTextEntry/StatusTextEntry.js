@@ -1,4 +1,4 @@
-const statusTextEntry = () => {
+const StatusTextEntry = () => {
   return `
     <div id="statusTextContainer">
       <textarea id="statusTextInput" placeholder="Type a status"></textarea>
@@ -9,4 +9,4 @@ const statusTextEntry = () => {
   `
 }
 
-export default statusTextEntry
+export default StatusTextEntry

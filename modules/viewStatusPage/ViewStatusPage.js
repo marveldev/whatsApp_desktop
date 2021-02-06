@@ -1,6 +1,6 @@
 import { getEntryFromDb } from "../../dataStorage.js"
 
-const viewStatusPage = async () => {
+const ViewStatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
 
   const statusEntryItems = statusData.map(statusEntryItem => {
@@ -39,4 +39,4 @@ const viewStatusPage = async () => {
   `
 }
 
-export default viewStatusPage
+export default ViewStatusPage
