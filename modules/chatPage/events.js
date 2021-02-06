@@ -44,8 +44,7 @@ const chatItemEvents = () => {
   const chatItemDropdowns = document.querySelectorAll('.chat-item-dropdown')
   const chatPageOverlay = document.querySelector('#chatPageOverlay')
 
-  for (let index = 0; index < chatTexts.length; index++) {
-    const chatText = chatTexts[index]
+  chatTexts.forEach(chatText => {
     chatText.addEventListener('mouseover', () => {
       const element = chatText.title
       document.querySelector(`#${element}`).style.visibility = 'visible'
@@ -55,10 +54,9 @@ const chatItemEvents = () => {
       const element = chatText.title
       document.querySelector(`#${element}`).style.visibility = 'hidden'
     })
-  }
+  })
 
-  for (let index = 0; index < chatItemDropdowns.length; index++) {
-    const chatItemDropdown = chatItemDropdowns[index]
+  chatItemDropdowns.forEach(chatItemDropdown => {
     chatItemDropdown.addEventListener('click', (event) => {
       const person = chatItemDropdown.parentElement.parentElement.id
       const horizontalPosition = event.clientX
@@ -75,7 +73,7 @@ const chatItemEvents = () => {
         chatPageOverlay.style.display = 'block'
       }
     })
-  }
+  });
 }
 
 const addChatItemToDom = (person, message) => {
