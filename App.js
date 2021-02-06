@@ -1,4 +1,5 @@
 import { addEntryToDb, request } from "./dataStorage.js"
+import chatPageEvents, { addChatItemToDom } from "./modules/chatPage/events.js"
 import ContactPane from "./modules/contactPane/ContactPane.js"
 import contactPaneEvents from "./modules/contactPane/events.js"
 import DefaultPage from "./modules/defaultPage/DefaultPage.js"
@@ -37,6 +38,12 @@ request.onsuccess = async () => {
       chatTime: chatTime,
       chatBoxValue: message
     }
-    addEntryToDb('chatData', chatObject)
+
+    const chatPageDiv = document.querySelector('.chat-page')
+    if (chatPageDiv) {
+      addChatItemToDom(person, message)
+    } else {
+      addEntryToDb('chatData', chatObject)
+    }
   })
 }
