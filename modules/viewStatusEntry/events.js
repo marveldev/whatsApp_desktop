@@ -1,6 +1,7 @@
 import switchCurrentPage from "../helper.js"
 
 const addViewStatusEvents = () => {
+  const currentPane = document.querySelector('.current-pane')
   const statusItems = document.querySelectorAll('.status-item')
   const bars = document.querySelectorAll('.bar')
   let interval
@@ -18,7 +19,7 @@ const addViewStatusEvents = () => {
         if (index === statusItems.length) {
           index = 0
           clearInterval(interval)
-          document.querySelector('.current-nav').style.display = 'block'
+          currentPane.style.display = 'block'
           switchCurrentPage('statusPage')
         }
         statusItems[index].classList.add('current')
@@ -42,13 +43,13 @@ const addViewStatusEvents = () => {
   }
 
   document.querySelector('.previous-button').addEventListener('click', () => {
-    document.querySelector('.current-nav').style.display = 'block'
+    currentPane.style.display = 'block'
     switchCurrentPage('statusPage')
     clearInterval(interval)
   })
 
   document.querySelector('.close-button').addEventListener('click', () => {
-    document.querySelector('.current-nav').style.display = 'block'
+    currentPane.style.display = 'block'
     switchCurrentPage('defaultPage')
     clearInterval(interval)
   })
@@ -59,7 +60,7 @@ const addViewStatusEvents = () => {
     index++
     if (index === statusItems.length) {
       index = 0
-      document.querySelector('.current-nav').style.display = 'block'
+      currentPane.style.display = 'block'
       switchCurrentPage('statusPage')
     }
     statusItems[index].classList.add('current')
@@ -72,7 +73,7 @@ const addViewStatusEvents = () => {
     statusItems[statusItems.length - index].classList.add('current')
     if (index === statusItems.length) {
       index = 0
-      document.querySelector('.current-nav').style.display = 'block'
+      currentPane.style.display = 'block'
       switchCurrentPage('statusPage')
     }
   })
