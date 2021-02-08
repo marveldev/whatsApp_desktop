@@ -1,16 +1,7 @@
-import { deleteEntry, getEntryFromDb } from "../../dataStorage.js"
+import { getEntryFromDb } from "../../dataStorage.js"
 
 const StatusPage = async () => {
   const statusData = await getEntryFromDb('statusData')
-  statusData.map(statusItem => {
-    const { timeOfStatusUpload } = statusItem
-    const timeDifference = (new Date().getTime() - timeOfStatusUpload.getTime())
-    const statusDuration = Math.floor(timeDifference/1000/60/60)
-    if (statusDuration >= '24') {
-      deleteEntry('statusData', statusItem.itemId)
-    }
-  })
-
   const statusEntryItems = statusData.map(statusEntryItem => {
     const {
       itemId, textValue, photoSource, entryBackgroundColor, timeOfStatusUpload
@@ -19,7 +10,7 @@ const StatusPage = async () => {
     const hour = timeOfStatusUpload.getHours()
     const minute = timeOfStatusUpload.getMinutes()
     const entryTime = new Date().getDay() > day ?
-    `yesterday at ${hour + ":" + minute}` : `today at ${hour + ":" + minute}`
+      `yesterday at ${hour + ":" + minute}` : `today at ${hour + ":" + minute}`
 
     if (textValue.length >= 1) {
       return `
@@ -47,7 +38,7 @@ const StatusPage = async () => {
       <button id="closeButton">X</button>
       <div class="view-update-page">
         <p id="statusMessage">
-          ${statusData.length == 0 ? "You've not added any status yet": 'View your update'}
+          ${statusData.length == 0 ? "You've not added any status yet" : 'View your update'}
         </p>
         <div class="status-entry-container">
           ${statusEntryItems.join('') || ''}
