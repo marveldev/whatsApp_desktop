@@ -1,7 +1,18 @@
-import { getEntryFromDb } from "../../dataStorage.js"
+import { deleteEntry, getEntryFromDb } from "../../dataStorage.js"
+import switchCurrentPage from "../helper.js"
 
 const StatusPane = async () => {
   const statusData = await getEntryFromDb('statusData')
+  statusData.map(statusItem => {
+    const { timeOfStatusUpload } = statusItem
+    const timeDifference = (new Date().getTime() - timeOfStatusUpload.getTime())
+    const statusDuration = Math.floor(timeDifference/1000/60/60)
+    if (statusDuration >= '24') {
+      deleteEntry('statusData', statusItem.itemId)
+      switchCurrentPage('statusPage')
+    }
+  })
+
   const photoSource = statusData[0] ? statusData[statusData.length - 1].photoSource : ''
   const textValue = statusData[0] ? statusData[statusData.length - 1].textValue : ''
   const entryBackgroundColor = statusData[0] ? statusData[statusData.length - 1].entryBackgroundColor : ''
