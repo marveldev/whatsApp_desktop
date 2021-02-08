@@ -11,8 +11,8 @@ import addStatusPageEvents from "./statusPage/events.js"
 import addStatusPaneEvents from "./statusPane/events.js"
 import StatusTextEntry from "./statusTextEntry/StatusTextEntry.js"
 import addStatusEntryEvents from "./statusTextEntry/events.js"
-import ViewStatusPage from "./viewStatusPage/ViewStatusPage.js"
-import addViewStatusEvents from "./viewStatusPage/events.js"
+import ViewStatusEntry from "./viewStatusEntry/ViewStatusEntry.js"
+import addViewStatusEvents from "./viewStatusEntry/events.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
@@ -46,8 +46,8 @@ const switchCurrentPage = async (page) => {
       currentNav.innerHTML = StatusTextEntry()
       addStatusEntryEvents()
       break;
-    case 'viewStatusPage':
-      currentPage.innerHTML = await ViewStatusPage()
+    case 'viewStatusEntry':
+      currentPage.innerHTML = await ViewStatusEntry()
       addViewStatusEvents()
       break;
     case 'defaultPage':

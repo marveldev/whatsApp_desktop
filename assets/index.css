@@ -7,5 +7,5 @@
 @import '../modules/statusPane/statusPane.css';
 @import '../modules/statusPage/statusPage.css';
 @import '../modules/statusTextEntry/statusTextEntry.css';
-@import '../modules/viewStatusPage/viewStatusPage.css';
+@import '../modules/viewStatusEntry/viewStatusEntry.css';
 @import './darkTheme.css';
