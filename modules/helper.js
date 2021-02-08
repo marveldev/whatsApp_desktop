@@ -16,7 +16,7 @@ import addViewStatusEvents from "./viewStatusEntry/events.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
-  const currentNav = document.querySelector('.current-nav')
+  const currentNav = document.querySelector('.current-pane')
 
   switch (page) {
     case 'contactPane':

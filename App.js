@@ -8,7 +8,7 @@ const App = () => {
   return `
     <section class="page-overlay"></section>
     <section class="page-container">
-      <div class="current-nav">
+      <div class="current-pane">
         ${ContactPane()}
       </div>
       <div class="current-page">

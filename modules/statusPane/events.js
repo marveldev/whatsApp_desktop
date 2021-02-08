@@ -57,7 +57,7 @@ const addStatusPaneEvents = () => {
   })
 
   document.querySelector('.view-status').addEventListener('click', () => {
-    document.querySelector('.current-nav').style.display = 'none'
+    document.querySelector('.current-pane').style.display = 'none'
     switchCurrentPage('viewStatusEntry')
   })
 }
