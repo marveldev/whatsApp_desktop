@@ -37,7 +37,7 @@ const deleteChatItem = () => {
   })
 }
 
-const chatItemEvents = () => {
+const addChatItemEvents = () => {
   const personOneDropdown = document.querySelector('#personOneDropdown')
   const personTwoDropdown = document.querySelector('#personTwoDropdown')
   const chatTexts = document.querySelectorAll('.chat-text')
@@ -117,26 +117,15 @@ const addChatItemToDom = (person, message) => {
   }
 
   addEntryToDb('chatData', chatObject)
-  chatItemEvents()
+  addChatItemEvents()
 }
 
-const chatPageEvents = () => {
+const addChatPageEvents = () => {
   const chatBox = document.querySelector('.chat-box')
   const sendChatButton = document.querySelector('.send-button')
   const recordButton = document.querySelector('.record-button')
   const personOneChatButton = document.querySelector('.person-one-button')
   const personTwoChatButton = document.querySelector('.person-two-button')
-  // const pusher = new Pusher('2de3c2f998e996603b10', {
-  //   cluster: 'eu'
-  // })
-
-  // if (document.querySelector('.current-page').innerHTML = ChatPage()) {
-  //   const channel = pusher.subscribe('chat')
-  //   channel.bind('send-message', data => {
-  //     const { person, message } = data
-  //     addChatItemToDom(person, message)
-  //   })
-  // }
 
   chatBox.addEventListener('input', () => {
     chatBox.style.height = "1px"
@@ -160,5 +149,5 @@ const chatPageEvents = () => {
   deleteChatItem()
 }
 
-export default chatPageEvents
-export { chatItemEvents, addChatItemToDom }
+export default addChatPageEvents
+export { addChatItemEvents, addChatItemToDom }

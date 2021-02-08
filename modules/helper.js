@@ -1,18 +1,18 @@
 import DefaultPage from "./defaultPage/DefaultPage.js"
 import ChatPage from "./chatPage/ChatPage.js"
-import chatPageEvents, { chatItemEvents } from "./chatPage/events.js"
+import addChatPageEvents, { addChatItemEvents } from "./chatPage/events.js"
 import ContactPane from "./contactPane/ContactPane.js"
-import contactPaneEvents from "./contactPane/events.js"
+import addContactPaneEvents from "./contactPane/events.js"
 import SettingsPane from "./settingsPane/SettingsPane.js"
-import settingsPaneEvents from "./settingsPane/events.js"
+import addSettingsPaneEvents from "./settingsPane/events.js"
 import StatusPage from "./statusPage/StatusPage.js"
 import StatusPane from "./statusPane/StatusPane.js"
-import statusPageEvent from "./statusPage/events.js"
-import statusPaneEvent from "./statusPane/events.js"
+import addStatusPageEvents from "./statusPage/events.js"
+import addStatusPaneEvents from "./statusPane/events.js"
 import StatusTextEntry from "./statusTextEntry/StatusTextEntry.js"
-import statusTextEntryEvent from "./statusTextEntry/events.js"
+import addStatusEntryEvents from "./statusTextEntry/events.js"
 import ViewStatusPage from "./viewStatusPage/ViewStatusPage.js"
-import viewStatusPageEvent from "./viewStatusPage/events.js"
+import addViewStatusEvents from "./viewStatusPage/events.js"
 
 const switchCurrentPage = async (page) => {
   const currentPage = document.querySelector('.current-page')
@@ -21,39 +21,39 @@ const switchCurrentPage = async (page) => {
   switch (page) {
     case 'contactPane':
       currentNav.innerHTML = ContactPane()
-      contactPaneEvents()
+      addContactPaneEvents()
       break;
     case 'settingsPane':
       currentNav.innerHTML = SettingsPane()
-      settingsPaneEvents()
+      addSettingsPaneEvents()
       break;
     case 'chatPage':
       currentPage.innerHTML = await ChatPage()
-      chatPageEvents()
-      chatItemEvents()
+      addChatPageEvents()
+      addChatItemEvents()
       break;
     case 'statusPage':
       currentPage.innerHTML = await StatusPage()
       currentNav.innerHTML = await StatusPane()
-      statusPaneEvent()
-      statusPageEvent()
+      addStatusPaneEvents()
+      addStatusPageEvents()
       break;
     case 'statusPane':
       currentNav.innerHTML = await StatusPane()
-      statusPaneEvent()
+      addStatusPaneEvents()
       break;
     case 'statusTextEntry':
       currentNav.innerHTML = StatusTextEntry()
-      statusTextEntryEvent()
+      addStatusEntryEvents()
       break;
     case 'viewStatusPage':
       currentPage.innerHTML = await ViewStatusPage()
-      viewStatusPageEvent()
+      addViewStatusEvents()
       break;
     case 'defaultPage':
       currentNav.innerHTML = ContactPane()
       currentPage.innerHTML = DefaultPage()
-      contactPaneEvents()
+      addContactPaneEvents()
       break;
     default:
       currentPage.innerHTML = DefaultPage()

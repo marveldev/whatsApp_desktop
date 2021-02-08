@@ -1,6 +1,6 @@
 import switchCurrentPage from "../helper.js";
 
-const contactPaneEvents = () => {
+const addContactPaneEvents = () => {
   const chatPersonButtons = document.querySelectorAll('.chat-person')
   for (let index = 0; index < chatPersonButtons.length; index++) {
     const chatPersonButton = chatPersonButtons[index];
@@ -29,4 +29,4 @@ const contactPaneEvents = () => {
   })
 }
 
-export default contactPaneEvents
+export default addContactPaneEvents

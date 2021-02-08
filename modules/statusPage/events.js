@@ -1,7 +1,7 @@
 import { deleteEntry } from "../../dataStorage.js"
 import switchCurrentPage from "../helper.js"
 
-const statusPageEvent = () => {
+const addStatusPageEvents = () => {
   const statusEntryItems = document.querySelectorAll('.status-entry-item')
   let itemId
 
@@ -51,4 +51,4 @@ const statusPageEvent = () => {
   })
 }
 
-export default statusPageEvent
+export default addStatusPageEvents

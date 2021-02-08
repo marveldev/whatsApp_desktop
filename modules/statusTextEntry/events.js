@@ -1,7 +1,7 @@
 import switchCurrentPage from "../helper.js"
 import { addStatusFile } from "../statusPane/events.js"
 
-const statusTextEntryEvent = () => {
+const addStatusEntryEvents = () => {
   const statusTextInput = document.querySelector('#statusTextInput')
   const statusTextContainer = document.querySelector('#statusTextContainer')
 
@@ -35,4 +35,4 @@ const statusTextEntryEvent = () => {
   })
 }
 
-export default statusTextEntryEvent
+export default addStatusEntryEvents

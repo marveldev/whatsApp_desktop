@@ -1,6 +1,6 @@
 import switchCurrentPage from "../helper.js"
 
-const settingsPaneEvents = () => {
+const addSettingsPaneEvents = () => {
   const theme = localStorage.getItem('theme')
   const radioButtons = document.querySelectorAll('.radio')
   const checkedRadioButton = document.querySelector(`input[value=${theme}]`)
@@ -39,4 +39,4 @@ const settingsPaneEvents = () => {
   })
 }
 
-export default settingsPaneEvents
+export default addSettingsPaneEvents

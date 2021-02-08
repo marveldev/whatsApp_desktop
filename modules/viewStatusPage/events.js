@@ -1,6 +1,6 @@
 import switchCurrentPage from "../helper.js"
 
-const viewStatusPageEvent = () => {
+const addViewStatusEvents = () => {
   const statusItems = document.querySelectorAll('.status-item')
   const bars = document.querySelectorAll('.bar')
   let interval
@@ -78,4 +78,4 @@ const viewStatusPageEvent = () => {
   })
 }
 
-export default viewStatusPageEvent
+export default addViewStatusEvents

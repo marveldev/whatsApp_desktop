@@ -35,10 +35,11 @@ const addStatusFile = (textValue, photoSource, entryBackgroundColor) => {
     entryBackgroundColor: entryBackgroundColor,
     timeOfStatusUpload: new Date()
   }
+
   addEntryToDb('statusData', statusObject)
 }
 
-const statusPaneEvent = () => {
+const addStatusPaneEvents = () => {
   const statusFilePicker = document.querySelector('#addPhotoStatus')
   statusFilePicker.addEventListener('change', () => {
     const photoReader = new FileReader()
@@ -61,5 +62,5 @@ const statusPaneEvent = () => {
   })
 }
 
-export default statusPaneEvent
+export default addStatusPaneEvents
 export { addStatusFile }
