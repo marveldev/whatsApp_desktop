@@ -127,12 +127,16 @@ const addChatPageEvents = () => {
   const personOneChatButton = document.querySelector('.person-one-button')
   const personTwoChatButton = document.querySelector('.person-two-button')
 
-  chatBox.addEventListener('input', () => {
+  chatBox.addEventListener('keypress', (event) => {
     chatBox.style.height = "1px"
     chatBox.style.height = (3+chatBox.scrollHeight)+"px"
     if (chatBox.value.trim().length >= 1) {
       sendChatButton.style.display = 'block'
       recordButton.style.display = 'none'
+      if (event.keyCode == 13 && !event.shiftKey) {
+        event.preventDefault()
+        document.querySelector('.person-button-container').style.display = 'block'
+      }
     } else {
       sendChatButton.style.display = 'none'
       recordButton.style.display = 'block'
